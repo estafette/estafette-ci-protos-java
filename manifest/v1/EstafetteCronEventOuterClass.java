@@ -638,9 +638,10 @@ public final class EstafetteCronEventOuterClass {
       "\n&manifest.v1/estafette_cron_event.proto" +
       "\022\013manifest.v1\032\037google/protobuf/timestamp" +
       ".proto\">\n\022EstafetteCronEvent\022(\n\004time\030\001 \001" +
-      "(\0132\032.google.protobuf.TimestampB@Z>github" +
+      "(\0132\032.google.protobuf.TimestampB[Z>github" +
       ".com/estafette/estafette-ci-contracts-go" +
-      "lang/manifest_v1b\006proto3"
+      "lang/manifest_v1\252\002\030Estafette.CI.Manifest" +
+      ".V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

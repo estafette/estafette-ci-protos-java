@@ -717,9 +717,10 @@ public final class EstafettePubSubTriggerOuterClass {
     java.lang.String[] descriptorData = {
       "\n+manifest.v1/estafette_pub_sub_trigger." +
       "proto\022\013manifest.v1\"8\n\026EstafettePubSubTri" +
-      "gger\022\017\n\007project\030\001 \001(\t\022\r\n\005topic\030\002 \001(\tB@Z>" +
+      "gger\022\017\n\007project\030\001 \001(\t\022\r\n\005topic\030\002 \001(\tB[Z>" +
       "github.com/estafette/estafette-ci-contra" +
-      "cts-golang/manifest_v1b\006proto3"
+      "cts-golang/manifest_v1\252\002\030Estafette.CI.Ma" +
+      "nifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -507,9 +507,9 @@ public final class BuildParamsConfigOuterClass {
     java.lang.String[] descriptorData = {
       "\n&contracts.v1/build_params_config.proto" +
       "\022\014contracts.v1\"%\n\021BuildParamsConfig\022\020\n\010b" +
-      "uild_id\030\001 \001(\003BAZ?github.com/estafette/es" +
+      "uild_id\030\001 \001(\003B]Z?github.com/estafette/es" +
       "tafette-ci-contracts-golang/contracts_v1" +
-      "b\006proto3"
+      "\252\002\031Estafette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1323,9 +1323,9 @@ public final class ReleaseTargetOuterClass {
       "o\"\203\001\n\rReleaseTarget\022\014\n\004name\030\001 \001(\t\0224\n\007act" +
       "ions\030\002 \003(\0132#.manifest.v1.EstafetteReleas" +
       "eAction\022.\n\017active_releases\030\003 \003(\0132\025.contr" +
-      "acts.v1.ReleaseBAZ?github.com/estafette/" +
+      "acts.v1.ReleaseB]Z?github.com/estafette/" +
       "estafette-ci-contracts-golang/contracts_" +
-      "v1b\006proto3"
+      "v1\252\002\031Estafette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

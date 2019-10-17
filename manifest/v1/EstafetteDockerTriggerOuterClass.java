@@ -855,8 +855,9 @@ public final class EstafetteDockerTriggerOuterClass {
       "\n*manifest.v1/estafette_docker_trigger.p" +
       "roto\022\013manifest.v1\"C\n\026EstafetteDockerTrig" +
       "ger\022\r\n\005event\030\001 \001(\t\022\r\n\005image\030\002 \001(\t\022\013\n\003tag" +
-      "\030\003 \001(\tB@Z>github.com/estafette/estafette" +
-      "-ci-contracts-golang/manifest_v1b\006proto3"
+      "\030\003 \001(\tB[Z>github.com/estafette/estafette" +
+      "-ci-contracts-golang/manifest_v1\252\002\030Estaf" +
+      "ette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

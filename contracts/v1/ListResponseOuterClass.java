@@ -1012,8 +1012,9 @@ public final class ListResponseOuterClass {
       "\031google/protobuf/any.proto\"a\n\014ListRespon" +
       "se\022#\n\005items\030\001 \003(\0132\024.google.protobuf.Any\022" +
       ",\n\npagination\030\002 \001(\0132\030.contracts.v1.Pagin" +
-      "ationBAZ?github.com/estafette/estafette-" +
-      "ci-contracts-golang/contracts_v1b\006proto3"
+      "ationB]Z?github.com/estafette/estafette-" +
+      "ci-contracts-golang/contracts_v1\252\002\031Estaf" +
+      "ette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

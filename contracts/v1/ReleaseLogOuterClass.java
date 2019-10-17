@@ -1699,9 +1699,10 @@ public final class ReleaseLogOuterClass {
       "(\t\022\022\n\nrepo_owner\030\003 \001(\t\022\021\n\trepo_name\030\004 \001(" +
       "\t\022\022\n\nrelease_id\030\005 \001(\t\022)\n\005steps\030\006 \003(\0132\032.c" +
       "ontracts.v1.BuildLogStep\022/\n\013inserted_at\030" +
-      "\007 \001(\0132\032.google.protobuf.TimestampBAZ?git" +
+      "\007 \001(\0132\032.google.protobuf.TimestampB]Z?git" +
       "hub.com/estafette/estafette-ci-contracts" +
-      "-golang/contracts_v1b\006proto3"
+      "-golang/contracts_v1\252\002\031Estafette.CI.Cont" +
+      "racts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

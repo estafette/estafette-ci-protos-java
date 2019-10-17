@@ -1043,9 +1043,9 @@ public final class EstafetteSemverVersionOuterClass {
       "ersion\022\r\n\005major\030\001 \001(\003\022\r\n\005minor\030\002 \001(\003\022\r\n\005" +
       "patch\030\003 \001(\t\022\026\n\016label_template\030\004 \001(\t\0228\n\016r" +
       "elease_branch\030\005 \001(\0132 .manifest.v1.String" +
-      "OrStringArrayB@Z>github.com/estafette/es" +
-      "tafette-ci-contracts-golang/manifest_v1b" +
-      "\006proto3"
+      "OrStringArrayB[Z>github.com/estafette/es" +
+      "tafette-ci-contracts-golang/manifest_v1\252" +
+      "\002\030Estafette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

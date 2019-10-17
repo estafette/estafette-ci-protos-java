@@ -580,9 +580,10 @@ public final class EstafetteTriggerBuildActionOuterClass {
     java.lang.String[] descriptorData = {
       "\n0manifest.v1/estafette_trigger_build_ac" +
       "tion.proto\022\013manifest.v1\"-\n\033EstafetteTrig" +
-      "gerBuildAction\022\016\n\006branch\030\001 \001(\tB@Z>github" +
+      "gerBuildAction\022\016\n\006branch\030\001 \001(\tB[Z>github" +
       ".com/estafette/estafette-ci-contracts-go" +
-      "lang/manifest_v1b\006proto3"
+      "lang/manifest_v1\252\002\030Estafette.CI.Manifest" +
+      ".V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -717,9 +717,10 @@ public final class EstafetteBuilderOuterClass {
     java.lang.String[] descriptorData = {
       "\n#manifest.v1/estafette_builder.proto\022\013m" +
       "anifest.v1\";\n\020EstafetteBuilder\022\r\n\005track\030" +
-      "\001 \001(\t\022\030\n\020operating_system\030\002 \001(\tB@Z>githu" +
+      "\001 \001(\t\022\030\n\020operating_system\030\002 \001(\tB[Z>githu" +
       "b.com/estafette/estafette-ci-contracts-g" +
-      "olang/manifest_v1b\006proto3"
+      "olang/manifest_v1\252\002\030Estafette.CI.Manifes" +
+      "t.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

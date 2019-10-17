@@ -992,9 +992,10 @@ public final class EstafettePipelineTriggerOuterClass {
       "\n,manifest.v1/estafette_pipeline_trigger" +
       ".proto\022\013manifest.v1\"W\n\030EstafettePipeline" +
       "Trigger\022\r\n\005event\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\014" +
-      "\n\004name\030\003 \001(\t\022\016\n\006branch\030\004 \001(\tB@Z>github.c" +
+      "\n\004name\030\003 \001(\t\022\016\n\006branch\030\004 \001(\tB[Z>github.c" +
       "om/estafette/estafette-ci-contracts-gola" +
-      "ng/manifest_v1b\006proto3"
+      "ng/manifest_v1\252\002\030Estafette.CI.Manifest.V" +
+      "1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

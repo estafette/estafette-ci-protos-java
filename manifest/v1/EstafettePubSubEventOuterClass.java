@@ -717,9 +717,10 @@ public final class EstafettePubSubEventOuterClass {
     java.lang.String[] descriptorData = {
       "\n)manifest.v1/estafette_pub_sub_event.pr" +
       "oto\022\013manifest.v1\"6\n\024EstafettePubSubEvent" +
-      "\022\017\n\007project\030\001 \001(\t\022\r\n\005topic\030\002 \001(\tB@Z>gith" +
+      "\022\017\n\007project\030\001 \001(\t\022\r\n\005topic\030\002 \001(\tB[Z>gith" +
       "ub.com/estafette/estafette-ci-contracts-" +
-      "golang/manifest_v1b\006proto3"
+      "golang/manifest_v1\252\002\030Estafette.CI.Manife" +
+      "st.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

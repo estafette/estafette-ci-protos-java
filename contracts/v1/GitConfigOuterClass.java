@@ -1130,8 +1130,9 @@ public final class GitConfigOuterClass {
       "ts.v1\"s\n\tGitConfig\022\023\n\013repo_source\030\001 \001(\t\022" +
       "\022\n\nrepo_owner\030\002 \001(\t\022\021\n\trepo_name\030\003 \001(\t\022\023" +
       "\n\013repo_branch\030\004 \001(\t\022\025\n\rrepo_revision\030\005 \001" +
-      "(\tBAZ?github.com/estafette/estafette-ci-" +
-      "contracts-golang/contracts_v1b\006proto3"
+      "(\tB]Z?github.com/estafette/estafette-ci-" +
+      "contracts-golang/contracts_v1\252\002\031Estafett" +
+      "e.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

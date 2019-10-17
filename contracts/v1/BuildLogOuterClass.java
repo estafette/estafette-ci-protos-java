@@ -1974,9 +1974,10 @@ public final class BuildLogOuterClass {
       "\013repo_branch\030\005 \001(\t\022\025\n\rrepo_revision\030\006 \001(" +
       "\t\022\020\n\010build_id\030\007 \001(\t\022)\n\005steps\030\010 \003(\0132\032.con" +
       "tracts.v1.BuildLogStep\022/\n\013inserted_at\030\t " +
-      "\001(\0132\032.google.protobuf.TimestampBAZ?githu" +
+      "\001(\0132\032.google.protobuf.TimestampB]Z?githu" +
       "b.com/estafette/estafette-ci-contracts-g" +
-      "olang/contracts_v1b\006proto3"
+      "olang/contracts_v1\252\002\031Estafette.CI.Contra" +
+      "cts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1677,9 +1677,10 @@ public final class BuildLogStepOuterClass {
       "\030\004 \001(\0132\031.google.protobuf.Duration\022-\n\tlog" +
       "_lines\030\005 \003(\0132\032.contracts.v1.BuildLogLine" +
       "\022\021\n\texit_code\030\006 \001(\003\022\016\n\006status\030\007 \001(\t\022\025\n\ra" +
-      "uto_injected\030\010 \001(\010BAZ?github.com/estafet" +
+      "uto_injected\030\010 \001(\010B]Z?github.com/estafet" +
       "te/estafette-ci-contracts-golang/contrac" +
-      "ts_v1b\006proto3"
+      "ts_v1\252\002\031Estafette.CI.Contracts.V1b\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -835,9 +835,10 @@ public final class EstafetteVersionOuterClass {
       "stom_version.proto\"|\n\020EstafetteVersion\0223" +
       "\n\006semver\030\001 \001(\0132#.manifest.v1.EstafetteSe" +
       "mverVersion\0223\n\006custom\030\002 \001(\0132#.manifest.v" +
-      "1.EstafetteCustomVersionB@Z>github.com/e" +
+      "1.EstafetteCustomVersionB[Z>github.com/e" +
       "stafette/estafette-ci-contracts-golang/m" +
-      "anifest_v1b\006proto3"
+      "anifest_v1\252\002\030Estafette.CI.Manifest.V1b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

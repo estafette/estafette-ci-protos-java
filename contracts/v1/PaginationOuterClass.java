@@ -700,9 +700,9 @@ public final class PaginationOuterClass {
       "\n\035contracts.v1/pagination.proto\022\014contrac" +
       "ts.v1\"R\n\nPagination\022\014\n\004page\030\001 \001(\003\022\014\n\004siz" +
       "e\030\002 \001(\003\022\023\n\013total_pages\030\003 \001(\003\022\023\n\013total_it" +
-      "ems\030\004 \001(\003BAZ?github.com/estafette/estafe" +
-      "tte-ci-contracts-golang/contracts_v1b\006pr" +
-      "oto3"
+      "ems\030\004 \001(\003B]Z?github.com/estafette/estafe" +
+      "tte-ci-contracts-golang/contracts_v1\252\002\031E" +
+      "stafette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

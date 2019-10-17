@@ -2015,8 +2015,9 @@ public final class EstafetteTriggerOuterClass {
       "_action\030\007 \001(\0132(.manifest.v1.EstafetteTri" +
       "ggerBuildAction\022B\n\016release_action\030\010 \001(\0132" +
       "*.manifest.v1.EstafetteTriggerReleaseAct" +
-      "ionB@Z>github.com/estafette/estafette-ci" +
-      "-contracts-golang/manifest_v1b\006proto3"
+      "ionB[Z>github.com/estafette/estafette-ci" +
+      "-contracts-golang/manifest_v1\252\002\030Estafett" +
+      "e.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

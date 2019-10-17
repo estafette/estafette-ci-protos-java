@@ -580,9 +580,9 @@ public final class EstafetteCronTriggerOuterClass {
     java.lang.String[] descriptorData = {
       "\n(manifest.v1/estafette_cron_trigger.pro" +
       "to\022\013manifest.v1\"(\n\024EstafetteCronTrigger\022" +
-      "\020\n\010schedule\030\001 \001(\tB@Z>github.com/estafett" +
+      "\020\n\010schedule\030\001 \001(\tB[Z>github.com/estafett" +
       "e/estafette-ci-contracts-golang/manifest" +
-      "_v1b\006proto3"
+      "_v1\252\002\030Estafette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

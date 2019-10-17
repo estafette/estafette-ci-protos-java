@@ -855,8 +855,9 @@ public final class EstafetteGitEventOuterClass {
       "\n%manifest.v1/estafette_git_event.proto\022" +
       "\013manifest.v1\"F\n\021EstafetteGitEvent\022\r\n\005eve" +
       "nt\030\001 \001(\t\022\022\n\nrepository\030\002 \001(\t\022\016\n\006branch\030\003" +
-      " \001(\tB@Z>github.com/estafette/estafette-c" +
-      "i-contracts-golang/manifest_v1b\006proto3"
+      " \001(\tB[Z>github.com/estafette/estafette-c" +
+      "i-contracts-golang/manifest_v1\252\002\030Estafet" +
+      "te.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

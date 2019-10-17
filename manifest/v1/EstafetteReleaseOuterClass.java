@@ -1757,9 +1757,9 @@ public final class EstafetteReleaseOuterClass {
       " \003(\0132#.manifest.v1.EstafetteReleaseActio" +
       "n\022/\n\010triggers\030\004 \003(\0132\035.manifest.v1.Estafe" +
       "tteTrigger\022+\n\006stages\030\005 \003(\0132\033.manifest.v1" +
-      ".EstafetteStageB@Z>github.com/estafette/" +
+      ".EstafetteStageB[Z>github.com/estafette/" +
       "estafette-ci-contracts-golang/manifest_v" +
-      "1b\006proto3"
+      "1\252\002\030Estafette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

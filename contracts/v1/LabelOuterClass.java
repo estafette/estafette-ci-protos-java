@@ -716,9 +716,10 @@ public final class LabelOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030contracts.v1/label.proto\022\014contracts.v1" +
-      "\"#\n\005Label\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\tBAZ" +
+      "\"#\n\005Label\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\tB]Z" +
       "?github.com/estafette/estafette-ci-contr" +
-      "acts-golang/contracts_v1b\006proto3"
+      "acts-golang/contracts_v1\252\002\031Estafette.CI." +
+      "Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

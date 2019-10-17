@@ -1244,9 +1244,10 @@ public final class BuildLogStepDockerImageOuterClass {
       "ge\022\014\n\004name\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022\021\n\tis_pull" +
       "ed\030\003 \001(\010\022\022\n\nimage_size\030\004 \001(\003\0220\n\rpull_dur" +
       "ation\030\005 \001(\0132\031.google.protobuf.Duration\022\r" +
-      "\n\005error\030\006 \001(\t\022\022\n\nis_trusted\030\007 \001(\010BAZ?git" +
+      "\n\005error\030\006 \001(\t\022\022\n\nis_trusted\030\007 \001(\010B]Z?git" +
       "hub.com/estafette/estafette-ci-contracts" +
-      "-golang/contracts_v1b\006proto3"
+      "-golang/contracts_v1\252\002\031Estafette.CI.Cont" +
+      "racts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

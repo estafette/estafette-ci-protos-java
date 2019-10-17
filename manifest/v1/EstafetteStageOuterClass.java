@@ -2056,9 +2056,10 @@ public final class EstafetteStageOuterClass {
       "age.CustomPropertiesEntry\032.\n\014EnvVarsEntr" +
       "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032M\n\025Cus" +
       "tomPropertiesEntry\022\013\n\003key\030\001 \001(\t\022#\n\005value" +
-      "\030\002 \001(\0132\024.google.protobuf.Any:\0028\001B@Z>gith" +
+      "\030\002 \001(\0132\024.google.protobuf.Any:\0028\001B[Z>gith" +
       "ub.com/estafette/estafette-ci-contracts-" +
-      "golang/manifest_v1b\006proto3"
+      "golang/manifest_v1\252\002\030Estafette.CI.Manife" +
+      "st.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

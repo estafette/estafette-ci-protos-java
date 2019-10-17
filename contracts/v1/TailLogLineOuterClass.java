@@ -1434,9 +1434,10 @@ public final class TailLogLineOuterClass {
       "4\n\005image\030\003 \001(\0132%.contracts.v1.BuildLogSt" +
       "epDockerImage\022+\n\010duration\030\004 \001(\0132\031.google" +
       ".protobuf.Duration\022\021\n\texit_code\030\005 \001(\003\022\016\n" +
-      "\006status\030\006 \001(\t\022\025\n\rauto_injected\030\007 \001(\010BAZ?" +
+      "\006status\030\006 \001(\t\022\025\n\rauto_injected\030\007 \001(\010B]Z?" +
       "github.com/estafette/estafette-ci-contra" +
-      "cts-golang/contracts_v1b\006proto3"
+      "cts-golang/contracts_v1\252\002\031Estafette.CI.C" +
+      "ontracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
