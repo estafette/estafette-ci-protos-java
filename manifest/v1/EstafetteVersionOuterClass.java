@@ -830,9 +830,9 @@ public final class EstafetteVersionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#manifest.v1/estafette_version.proto\022\013m" +
-      "anifest.v1\032*manifest.v1/estafette_semver" +
-      "_version.proto\032*manifest.v1/estafette_cu" +
-      "stom_version.proto\"|\n\020EstafetteVersion\0223" +
+      "anifest.v1\032*manifest.v1/estafette_custom" +
+      "_version.proto\032*manifest.v1/estafette_se" +
+      "mver_version.proto\"|\n\020EstafetteVersion\0223" +
       "\n\006semver\030\001 \001(\0132#.manifest.v1.EstafetteSe" +
       "mverVersion\0223\n\006custom\030\002 \001(\0132#.manifest.v" +
       "1.EstafetteCustomVersionB[Z>github.com/e" +
@@ -851,8 +851,8 @@ public final class EstafetteVersionOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          manifest.v1.EstafetteSemverVersionOuterClass.getDescriptor(),
           manifest.v1.EstafetteCustomVersionOuterClass.getDescriptor(),
+          manifest.v1.EstafetteSemverVersionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_manifest_v1_EstafetteVersion_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -860,8 +860,8 @@ public final class EstafetteVersionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_manifest_v1_EstafetteVersion_descriptor,
         new java.lang.String[] { "Semver", "Custom", });
-    manifest.v1.EstafetteSemverVersionOuterClass.getDescriptor();
     manifest.v1.EstafetteCustomVersionOuterClass.getDescriptor();
+    manifest.v1.EstafetteSemverVersionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

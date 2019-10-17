@@ -4428,12 +4428,12 @@ public final class PipelineOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033contracts.v1/pipeline.proto\022\014contracts" +
-      ".v1\032\030contracts.v1/label.proto\032!contracts" +
-      ".v1/release_target.proto\032\035contracts.v1/g" +
-      "it_commit.proto\032#manifest.v1/estafette_t" +
-      "rigger.proto\032!manifest.v1/estafette_even" +
-      "t.proto\032\037google/protobuf/timestamp.proto" +
-      "\032\036google/protobuf/duration.proto\"\203\005\n\010Pip" +
+      ".v1\032\035contracts.v1/git_commit.proto\032\030cont" +
+      "racts.v1/label.proto\032!contracts.v1/relea" +
+      "se_target.proto\032\036google/protobuf/duratio" +
+      "n.proto\032\037google/protobuf/timestamp.proto" +
+      "\032!manifest.v1/estafette_event.proto\032#man" +
+      "ifest.v1/estafette_trigger.proto\"\203\005\n\010Pip" +
       "eline\022\n\n\002id\030\001 \001(\t\022\023\n\013repo_source\030\002 \001(\t\022\022" +
       "\n\nrepo_owner\030\003 \001(\t\022\021\n\trepo_name\030\004 \001(\t\022\023\n" +
       "\013repo_branch\030\005 \001(\t\022\025\n\rrepo_revision\030\006 \001(" +
@@ -4465,13 +4465,13 @@ public final class PipelineOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          contracts.v1.GitCommitOuterClass.getDescriptor(),
           contracts.v1.LabelOuterClass.getDescriptor(),
           contracts.v1.ReleaseTargetOuterClass.getDescriptor(),
-          contracts.v1.GitCommitOuterClass.getDescriptor(),
-          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
-          manifest.v1.EstafetteEventOuterClass.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
+          manifest.v1.EstafetteEventOuterClass.getDescriptor(),
+          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
         }, assigner);
     internal_static_contracts_v1_Pipeline_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4479,13 +4479,13 @@ public final class PipelineOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contracts_v1_Pipeline_descriptor,
         new java.lang.String[] { "Id", "RepoSource", "RepoOwner", "RepoName", "RepoBranch", "RepoRevision", "BuildVersion", "BuildStatus", "Labels", "ReleaseTargets", "Manifest", "ManifestWithDefaults", "Commits", "Triggers", "Events", "InsertedAt", "UpdatedAt", "Duration", "LastUpdatedAt", });
+    contracts.v1.GitCommitOuterClass.getDescriptor();
     contracts.v1.LabelOuterClass.getDescriptor();
     contracts.v1.ReleaseTargetOuterClass.getDescriptor();
-    contracts.v1.GitCommitOuterClass.getDescriptor();
-    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
-    manifest.v1.EstafetteEventOuterClass.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
+    manifest.v1.EstafetteEventOuterClass.getDescriptor();
+    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

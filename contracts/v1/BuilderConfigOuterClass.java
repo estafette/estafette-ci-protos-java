@@ -3534,15 +3534,15 @@ public final class BuilderConfigOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!contracts.v1/builder_config.proto\022\014con" +
-      "tracts.v1\032$manifest.v1/estafette_manifes" +
-      "t.proto\032!manifest.v1/estafette_event.pro" +
-      "to\032#contracts.v1/ci_server_config.proto\032" +
-      "&contracts.v1/build_params_config.proto\032" +
-      "(contracts.v1/release_params_config.prot" +
-      "o\032\035contracts.v1/git_config.proto\032\'contra" +
-      "cts.v1/build_version_config.proto\032$contr" +
-      "acts.v1/credential_config.proto\032\'contrac" +
-      "ts.v1/trusted_image_config.proto\"\332\004\n\rBui" +
+      "tracts.v1\032&contracts.v1/build_params_con" +
+      "fig.proto\032\'contracts.v1/build_version_co" +
+      "nfig.proto\032#contracts.v1/ci_server_confi" +
+      "g.proto\032$contracts.v1/credential_config." +
+      "proto\032\035contracts.v1/git_config.proto\032(co" +
+      "ntracts.v1/release_params_config.proto\032\'" +
+      "contracts.v1/trusted_image_config.proto\032" +
+      "!manifest.v1/estafette_event.proto\032$mani" +
+      "fest.v1/estafette_manifest.proto\"\332\004\n\rBui" +
       "lderConfig\022\016\n\006action\030\001 \001(\t\022\r\n\005track\030\002 \001(" +
       "\t\022\027\n\017registry_mirror\030\003 \001(\t\022\031\n\021docker_dae" +
       "mon_mtu\030\004 \001(\t\0220\n\010manifest\030\005 \001(\0132\036.manife" +
@@ -3573,15 +3573,15 @@ public final class BuilderConfigOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          manifest.v1.EstafetteManifestOuterClass.getDescriptor(),
-          manifest.v1.EstafetteEventOuterClass.getDescriptor(),
-          contracts.v1.CiServerConfig.getDescriptor(),
           contracts.v1.BuildParamsConfigOuterClass.getDescriptor(),
-          contracts.v1.ReleaseParamsConfigOuterClass.getDescriptor(),
-          contracts.v1.GitConfigOuterClass.getDescriptor(),
           contracts.v1.BuildVersionConfigOuterClass.getDescriptor(),
+          contracts.v1.CiServerConfig.getDescriptor(),
           contracts.v1.CredentialConfigOuterClass.getDescriptor(),
+          contracts.v1.GitConfigOuterClass.getDescriptor(),
+          contracts.v1.ReleaseParamsConfigOuterClass.getDescriptor(),
           contracts.v1.TrustedImageConfigOuterClass.getDescriptor(),
+          manifest.v1.EstafetteEventOuterClass.getDescriptor(),
+          manifest.v1.EstafetteManifestOuterClass.getDescriptor(),
         }, assigner);
     internal_static_contracts_v1_BuilderConfig_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3589,15 +3589,15 @@ public final class BuilderConfigOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contracts_v1_BuilderConfig_descriptor,
         new java.lang.String[] { "Action", "Track", "RegistryMirror", "DockerDaemonMtu", "Manifest", "JobName", "ReleaseName", "Events", "CiServer", "BuildParams", "ReleaseParams", "Git", "BuildVersion", "Credentials", "TrustedImages", });
-    manifest.v1.EstafetteManifestOuterClass.getDescriptor();
-    manifest.v1.EstafetteEventOuterClass.getDescriptor();
-    contracts.v1.CiServerConfig.getDescriptor();
     contracts.v1.BuildParamsConfigOuterClass.getDescriptor();
-    contracts.v1.ReleaseParamsConfigOuterClass.getDescriptor();
-    contracts.v1.GitConfigOuterClass.getDescriptor();
     contracts.v1.BuildVersionConfigOuterClass.getDescriptor();
+    contracts.v1.CiServerConfig.getDescriptor();
     contracts.v1.CredentialConfigOuterClass.getDescriptor();
+    contracts.v1.GitConfigOuterClass.getDescriptor();
+    contracts.v1.ReleaseParamsConfigOuterClass.getDescriptor();
     contracts.v1.TrustedImageConfigOuterClass.getDescriptor();
+    manifest.v1.EstafetteEventOuterClass.getDescriptor();
+    manifest.v1.EstafetteManifestOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

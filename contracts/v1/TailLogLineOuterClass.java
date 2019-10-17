@@ -1426,9 +1426,9 @@ public final class TailLogLineOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n contracts.v1/tail_log_line.proto\022\014cont" +
-      "racts.v1\032\036google/protobuf/duration.proto" +
-      "\032!contracts.v1/build_log_line.proto\032.con" +
-      "tracts.v1/build_log_step_docker_image.pr" +
+      "racts.v1\032!contracts.v1/build_log_line.pr" +
+      "oto\032.contracts.v1/build_log_step_docker_" +
+      "image.proto\032\036google/protobuf/duration.pr" +
       "oto\"\346\001\n\013TailLogLine\022\014\n\004step\030\001 \001(\t\022,\n\010log" +
       "_line\030\002 \001(\0132\032.contracts.v1.BuildLogLine\022" +
       "4\n\005image\030\003 \001(\0132%.contracts.v1.BuildLogSt" +
@@ -1450,9 +1450,9 @@ public final class TailLogLineOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DurationProto.getDescriptor(),
           contracts.v1.BuildLogLineOuterClass.getDescriptor(),
           contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         }, assigner);
     internal_static_contracts_v1_TailLogLine_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1460,9 +1460,9 @@ public final class TailLogLineOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contracts_v1_TailLogLine_descriptor,
         new java.lang.String[] { "Step", "LogLine", "Image", "Duration", "ExitCode", "Status", "AutoInjected", });
-    com.google.protobuf.DurationProto.getDescriptor();
     contracts.v1.BuildLogLineOuterClass.getDescriptor();
     contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

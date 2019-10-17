@@ -1800,14 +1800,14 @@ public final class EstafetteEventOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!manifest.v1/estafette_event.proto\022\013man" +
-      "ifest.v1\032*manifest.v1/estafette_pipeline" +
-      "_event.proto\032)manifest.v1/estafette_rele" +
-      "ase_event.proto\032%manifest.v1/estafette_g" +
-      "it_event.proto\032(manifest.v1/estafette_do" +
-      "cker_event.proto\032&manifest.v1/estafette_" +
-      "cron_event.proto\032)manifest.v1/estafette_" +
-      "pub_sub_event.proto\032(manifest.v1/estafet" +
-      "te_manual_event.proto\"\362\002\n\016EstafetteEvent" +
+      "ifest.v1\032&manifest.v1/estafette_cron_eve" +
+      "nt.proto\032(manifest.v1/estafette_docker_e" +
+      "vent.proto\032%manifest.v1/estafette_git_ev" +
+      "ent.proto\032(manifest.v1/estafette_manual_" +
+      "event.proto\032*manifest.v1/estafette_pipel" +
+      "ine_event.proto\032)manifest.v1/estafette_p" +
+      "ub_sub_event.proto\032)manifest.v1/estafett" +
+      "e_release_event.proto\"\362\002\n\016EstafetteEvent" +
       "\0225\n\010pipeline\030\001 \001(\0132#.manifest.v1.Estafet" +
       "tePipelineEvent\0223\n\007release\030\002 \001(\0132\".manif" +
       "est.v1.EstafetteReleaseEvent\022+\n\003git\030\003 \001(" +
@@ -1832,13 +1832,13 @@ public final class EstafetteEventOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          manifest.v1.EstafettePipelineEventOuterClass.getDescriptor(),
-          manifest.v1.EstafetteReleaseEventOuterClass.getDescriptor(),
-          manifest.v1.EstafetteGitEventOuterClass.getDescriptor(),
-          manifest.v1.EstafetteDockerEventOuterClass.getDescriptor(),
           manifest.v1.EstafetteCronEventOuterClass.getDescriptor(),
-          manifest.v1.EstafettePubSubEventOuterClass.getDescriptor(),
+          manifest.v1.EstafetteDockerEventOuterClass.getDescriptor(),
+          manifest.v1.EstafetteGitEventOuterClass.getDescriptor(),
           manifest.v1.EstafetteManualEventOuterClass.getDescriptor(),
+          manifest.v1.EstafettePipelineEventOuterClass.getDescriptor(),
+          manifest.v1.EstafettePubSubEventOuterClass.getDescriptor(),
+          manifest.v1.EstafetteReleaseEventOuterClass.getDescriptor(),
         }, assigner);
     internal_static_manifest_v1_EstafetteEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1846,13 +1846,13 @@ public final class EstafetteEventOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_manifest_v1_EstafetteEvent_descriptor,
         new java.lang.String[] { "Pipeline", "Release", "Git", "Docker", "Cron", "PubSub", "Manual", });
-    manifest.v1.EstafettePipelineEventOuterClass.getDescriptor();
-    manifest.v1.EstafetteReleaseEventOuterClass.getDescriptor();
-    manifest.v1.EstafetteGitEventOuterClass.getDescriptor();
-    manifest.v1.EstafetteDockerEventOuterClass.getDescriptor();
     manifest.v1.EstafetteCronEventOuterClass.getDescriptor();
-    manifest.v1.EstafettePubSubEventOuterClass.getDescriptor();
+    manifest.v1.EstafetteDockerEventOuterClass.getDescriptor();
+    manifest.v1.EstafetteGitEventOuterClass.getDescriptor();
     manifest.v1.EstafetteManualEventOuterClass.getDescriptor();
+    manifest.v1.EstafettePipelineEventOuterClass.getDescriptor();
+    manifest.v1.EstafettePubSubEventOuterClass.getDescriptor();
+    manifest.v1.EstafetteReleaseEventOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1750,8 +1750,8 @@ public final class EstafetteReleaseOuterClass {
     java.lang.String[] descriptorData = {
       "\n#manifest.v1/estafette_release.proto\022\013m" +
       "anifest.v1\032*manifest.v1/estafette_releas" +
-      "e_action.proto\032#manifest.v1/estafette_tr" +
-      "igger.proto\032!manifest.v1/estafette_stage" +
+      "e_action.proto\032!manifest.v1/estafette_st" +
+      "age.proto\032#manifest.v1/estafette_trigger" +
       ".proto\"\316\001\n\020EstafetteRelease\022\014\n\004name\030\001 \001(" +
       "\t\022\030\n\020clone_repository\030\002 \001(\010\0224\n\007actions\030\003" +
       " \003(\0132#.manifest.v1.EstafetteReleaseActio" +
@@ -1773,8 +1773,8 @@ public final class EstafetteReleaseOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor(),
-          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
           manifest.v1.EstafetteStageOuterClass.getDescriptor(),
+          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
         }, assigner);
     internal_static_manifest_v1_EstafetteRelease_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1783,8 +1783,8 @@ public final class EstafetteReleaseOuterClass {
         internal_static_manifest_v1_EstafetteRelease_descriptor,
         new java.lang.String[] { "Name", "CloneRepository", "Actions", "Triggers", "Stages", });
     manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor();
-    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
     manifest.v1.EstafetteStageOuterClass.getDescriptor();
+    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

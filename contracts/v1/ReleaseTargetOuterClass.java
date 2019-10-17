@@ -1318,8 +1318,8 @@ public final class ReleaseTargetOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!contracts.v1/release_target.proto\022\014con" +
-      "tracts.v1\032*manifest.v1/estafette_release" +
-      "_action.proto\032\032contracts.v1/release.prot" +
+      "tracts.v1\032\032contracts.v1/release.proto\032*m" +
+      "anifest.v1/estafette_release_action.prot" +
       "o\"\203\001\n\rReleaseTarget\022\014\n\004name\030\001 \001(\t\0224\n\007act" +
       "ions\030\002 \003(\0132#.manifest.v1.EstafetteReleas" +
       "eAction\022.\n\017active_releases\030\003 \003(\0132\025.contr" +
@@ -1338,8 +1338,8 @@ public final class ReleaseTargetOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor(),
           contracts.v1.ReleaseOuterClass.getDescriptor(),
+          manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_contracts_v1_ReleaseTarget_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1347,8 +1347,8 @@ public final class ReleaseTargetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contracts_v1_ReleaseTarget_descriptor,
         new java.lang.String[] { "Name", "Actions", "ActiveReleases", });
-    manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor();
     contracts.v1.ReleaseOuterClass.getDescriptor();
+    manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

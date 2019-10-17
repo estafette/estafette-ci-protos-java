@@ -1668,9 +1668,9 @@ public final class BuildLogStepOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!contracts.v1/build_log_step.proto\022\014con" +
-      "tracts.v1\032.contracts.v1/build_log_step_d" +
-      "ocker_image.proto\032!contracts.v1/build_lo" +
-      "g_line.proto\032\036google/protobuf/duration.p" +
+      "tracts.v1\032!contracts.v1/build_log_line.p" +
+      "roto\032.contracts.v1/build_log_step_docker" +
+      "_image.proto\032\036google/protobuf/duration.p" +
       "roto\"\373\001\n\014BuildLogStep\022\014\n\004step\030\001 \001(\t\0224\n\005i" +
       "mage\030\002 \001(\0132%.contracts.v1.BuildLogStepDo" +
       "ckerImage\022\021\n\trun_index\030\003 \001(\003\022+\n\010duration" +
@@ -1693,8 +1693,8 @@ public final class BuildLogStepOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor(),
           contracts.v1.BuildLogLineOuterClass.getDescriptor(),
+          contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
         }, assigner);
     internal_static_contracts_v1_BuildLogStep_descriptor =
@@ -1703,8 +1703,8 @@ public final class BuildLogStepOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_contracts_v1_BuildLogStep_descriptor,
         new java.lang.String[] { "Step", "Image", "RunIndex", "Duration", "LogLines", "ExitCode", "Status", "AutoInjected", });
-    contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor();
     contracts.v1.BuildLogLineOuterClass.getDescriptor();
+    contracts.v1.BuildLogStepDockerImageOuterClass.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
   }
 

@@ -2533,10 +2533,10 @@ public final class EstafetteManifestOuterClass {
     java.lang.String[] descriptorData = {
       "\n$manifest.v1/estafette_manifest.proto\022\013" +
       "manifest.v1\032#manifest.v1/estafette_build" +
-      "er.proto\032#manifest.v1/estafette_version." +
-      "proto\032#manifest.v1/estafette_trigger.pro" +
-      "to\032!manifest.v1/estafette_stage.proto\032#m" +
-      "anifest.v1/estafette_release.proto\"\357\003\n\021E" +
+      "er.proto\032#manifest.v1/estafette_release." +
+      "proto\032!manifest.v1/estafette_stage.proto" +
+      "\032#manifest.v1/estafette_trigger.proto\032#m" +
+      "anifest.v1/estafette_version.proto\"\357\003\n\021E" +
       "stafetteManifest\022.\n\007builder\030\001 \001(\0132\035.mani" +
       "fest.v1.EstafetteBuilder\022:\n\006labels\030\002 \003(\013" +
       "2*.manifest.v1.EstafetteManifest.LabelsE" +
@@ -2565,10 +2565,10 @@ public final class EstafetteManifestOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           manifest.v1.EstafetteBuilderOuterClass.getDescriptor(),
-          manifest.v1.EstafetteVersionOuterClass.getDescriptor(),
-          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
-          manifest.v1.EstafetteStageOuterClass.getDescriptor(),
           manifest.v1.EstafetteReleaseOuterClass.getDescriptor(),
+          manifest.v1.EstafetteStageOuterClass.getDescriptor(),
+          manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
+          manifest.v1.EstafetteVersionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_manifest_v1_EstafetteManifest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2589,10 +2589,10 @@ public final class EstafetteManifestOuterClass {
         internal_static_manifest_v1_EstafetteManifest_GlobalEnvVarsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     manifest.v1.EstafetteBuilderOuterClass.getDescriptor();
-    manifest.v1.EstafetteVersionOuterClass.getDescriptor();
-    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
-    manifest.v1.EstafetteStageOuterClass.getDescriptor();
     manifest.v1.EstafetteReleaseOuterClass.getDescriptor();
+    manifest.v1.EstafetteStageOuterClass.getDescriptor();
+    manifest.v1.EstafetteTriggerOuterClass.getDescriptor();
+    manifest.v1.EstafetteVersionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

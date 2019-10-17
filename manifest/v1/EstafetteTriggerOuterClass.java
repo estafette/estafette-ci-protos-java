@@ -1994,13 +1994,13 @@ public final class EstafetteTriggerOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#manifest.v1/estafette_trigger.proto\022\013m" +
-      "anifest.v1\032,manifest.v1/estafette_pipeli" +
-      "ne_trigger.proto\032+manifest.v1/estafette_" +
-      "release_trigger.proto\032\'manifest.v1/estaf" +
-      "ette_git_trigger.proto\032*manifest.v1/esta" +
-      "fette_docker_trigger.proto\032(manifest.v1/" +
-      "estafette_cron_trigger.proto\032+manifest.v" +
-      "1/estafette_pub_sub_trigger.proto\0320manif" +
+      "anifest.v1\032(manifest.v1/estafette_cron_t" +
+      "rigger.proto\032*manifest.v1/estafette_dock" +
+      "er_trigger.proto\032\'manifest.v1/estafette_" +
+      "git_trigger.proto\032,manifest.v1/estafette" +
+      "_pipeline_trigger.proto\032+manifest.v1/est" +
+      "afette_pub_sub_trigger.proto\032+manifest.v" +
+      "1/estafette_release_trigger.proto\0320manif" +
       "est.v1/estafette_trigger_build_action.pr" +
       "oto\0322manifest.v1/estafette_trigger_relea" +
       "se_action.proto\"\321\003\n\020EstafetteTrigger\0227\n\010" +
@@ -2030,12 +2030,12 @@ public final class EstafetteTriggerOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          manifest.v1.EstafettePipelineTriggerOuterClass.getDescriptor(),
-          manifest.v1.EstafetteReleaseTriggerOuterClass.getDescriptor(),
-          manifest.v1.EstafetteGitTriggerOuterClass.getDescriptor(),
-          manifest.v1.EstafetteDockerTriggerOuterClass.getDescriptor(),
           manifest.v1.EstafetteCronTriggerOuterClass.getDescriptor(),
+          manifest.v1.EstafetteDockerTriggerOuterClass.getDescriptor(),
+          manifest.v1.EstafetteGitTriggerOuterClass.getDescriptor(),
+          manifest.v1.EstafettePipelineTriggerOuterClass.getDescriptor(),
           manifest.v1.EstafettePubSubTriggerOuterClass.getDescriptor(),
+          manifest.v1.EstafetteReleaseTriggerOuterClass.getDescriptor(),
           manifest.v1.EstafetteTriggerBuildActionOuterClass.getDescriptor(),
           manifest.v1.EstafetteTriggerReleaseActionOuterClass.getDescriptor(),
         }, assigner);
@@ -2045,12 +2045,12 @@ public final class EstafetteTriggerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_manifest_v1_EstafetteTrigger_descriptor,
         new java.lang.String[] { "Pipeline", "Release", "Git", "Docker", "Cron", "PubSub", "BuildAction", "ReleaseAction", });
-    manifest.v1.EstafettePipelineTriggerOuterClass.getDescriptor();
-    manifest.v1.EstafetteReleaseTriggerOuterClass.getDescriptor();
-    manifest.v1.EstafetteGitTriggerOuterClass.getDescriptor();
-    manifest.v1.EstafetteDockerTriggerOuterClass.getDescriptor();
     manifest.v1.EstafetteCronTriggerOuterClass.getDescriptor();
+    manifest.v1.EstafetteDockerTriggerOuterClass.getDescriptor();
+    manifest.v1.EstafetteGitTriggerOuterClass.getDescriptor();
+    manifest.v1.EstafettePipelineTriggerOuterClass.getDescriptor();
     manifest.v1.EstafettePubSubTriggerOuterClass.getDescriptor();
+    manifest.v1.EstafetteReleaseTriggerOuterClass.getDescriptor();
     manifest.v1.EstafetteTriggerBuildActionOuterClass.getDescriptor();
     manifest.v1.EstafetteTriggerReleaseActionOuterClass.getDescriptor();
   }
