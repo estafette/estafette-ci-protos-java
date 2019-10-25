@@ -1039,10 +1039,10 @@ public final class CredentialConfigOuterClass {
       "8.contracts.v1.CredentialConfig.Addition" +
       "alPropertiesEntry\032Q\n\031AdditionalPropertie" +
       "sEntry\022\013\n\003key\030\001 \001(\t\022#\n\005value\030\002 \001(\0132\024.goo" +
-      "gle.protobuf.Any:\0028\001B{\n\034io.estafette.ci." +
-      "contracts.v1Z?github.com/estafette/estaf" +
-      "ette-ci-contracts-golang/contracts_v1\252\002\031" +
-      "Estafette.CI.Contracts.V1b\006proto3"
+      "gle.protobuf.Any:\0028\001Bx\n\034io.estafette.ci." +
+      "contracts.v1Z<github.com/estafette/estaf" +
+      "ette-ci-protos-golang/contracts_v1\252\002\031Est" +
+      "afette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -992,10 +992,10 @@ public final class EstafettePipelineTriggerOuterClass {
       "\n,manifest.v1/estafette_pipeline_trigger" +
       ".proto\022\013manifest.v1\"W\n\030EstafettePipeline" +
       "Trigger\022\r\n\005event\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\014" +
-      "\n\004name\030\003 \001(\t\022\016\n\006branch\030\004 \001(\tBx\n\033io.estaf" +
-      "ette.ci.manifest.v1Z>github.com/estafett" +
-      "e/estafette-ci-contracts-golang/manifest" +
-      "_v1\252\002\030Estafette.CI.Manifest.V1b\006proto3"
+      "\n\004name\030\003 \001(\t\022\016\n\006branch\030\004 \001(\tBu\n\033io.estaf" +
+      "ette.ci.manifest.v1Z;github.com/estafett" +
+      "e/estafette-ci-protos-golang/manifest_v1" +
+      "\252\002\030Estafette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

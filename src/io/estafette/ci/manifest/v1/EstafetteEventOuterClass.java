@@ -1816,11 +1816,11 @@ public final class EstafetteEventOuterClass {
       "vent\022-\n\004cron\030\005 \001(\0132\037.manifest.v1.Estafet" +
       "teCronEvent\0222\n\007pub_sub\030\006 \001(\0132!.manifest." +
       "v1.EstafettePubSubEvent\0221\n\006manual\030\007 \001(\0132" +
-      "!.manifest.v1.EstafetteManualEventBx\n\033io" +
-      ".estafette.ci.manifest.v1Z>github.com/es" +
-      "tafette/estafette-ci-contracts-golang/ma" +
-      "nifest_v1\252\002\030Estafette.CI.Manifest.V1b\006pr" +
-      "oto3"
+      "!.manifest.v1.EstafetteManualEventBu\n\033io" +
+      ".estafette.ci.manifest.v1Z;github.com/es" +
+      "tafette/estafette-ci-protos-golang/manif" +
+      "est_v1\252\002\030Estafette.CI.Manifest.V1b\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

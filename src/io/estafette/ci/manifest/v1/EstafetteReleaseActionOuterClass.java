@@ -580,10 +580,10 @@ public final class EstafetteReleaseActionOuterClass {
     java.lang.String[] descriptorData = {
       "\n*manifest.v1/estafette_release_action.p" +
       "roto\022\013manifest.v1\"&\n\026EstafetteReleaseAct" +
-      "ion\022\014\n\004name\030\001 \001(\tBx\n\033io.estafette.ci.man" +
-      "ifest.v1Z>github.com/estafette/estafette" +
-      "-ci-contracts-golang/manifest_v1\252\002\030Estaf" +
-      "ette.CI.Manifest.V1b\006proto3"
+      "ion\022\014\n\004name\030\001 \001(\tBu\n\033io.estafette.ci.man" +
+      "ifest.v1Z;github.com/estafette/estafette" +
+      "-ci-protos-golang/manifest_v1\252\002\030Estafett" +
+      "e.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

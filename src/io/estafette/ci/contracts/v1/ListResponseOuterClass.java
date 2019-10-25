@@ -1012,10 +1012,10 @@ public final class ListResponseOuterClass {
       "\031google/protobuf/any.proto\"a\n\014ListRespon" +
       "se\022#\n\005items\030\001 \003(\0132\024.google.protobuf.Any\022" +
       ",\n\npagination\030\002 \001(\0132\030.contracts.v1.Pagin" +
-      "ationB{\n\034io.estafette.ci.contracts.v1Z?g" +
-      "ithub.com/estafette/estafette-ci-contrac" +
-      "ts-golang/contracts_v1\252\002\031Estafette.CI.Co" +
-      "ntracts.V1b\006proto3"
+      "ationBx\n\034io.estafette.ci.contracts.v1Z<g" +
+      "ithub.com/estafette/estafette-ci-protos-" +
+      "golang/contracts_v1\252\002\031Estafette.CI.Contr" +
+      "acts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

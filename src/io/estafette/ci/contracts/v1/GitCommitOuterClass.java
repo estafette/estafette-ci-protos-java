@@ -775,10 +775,10 @@ public final class GitCommitOuterClass {
       "\n\035contracts.v1/git_commit.proto\022\014contrac" +
       "ts.v1\032\035contracts.v1/git_author.proto\"E\n\t" +
       "GitCommit\022\017\n\007message\030\001 \001(\t\022\'\n\006author\030\002 \001" +
-      "(\0132\027.contracts.v1.GitAuthorB{\n\034io.estafe" +
-      "tte.ci.contracts.v1Z?github.com/estafett" +
-      "e/estafette-ci-contracts-golang/contract" +
-      "s_v1\252\002\031Estafette.CI.Contracts.V1b\006proto3"
+      "(\0132\027.contracts.v1.GitAuthorBx\n\034io.estafe" +
+      "tte.ci.contracts.v1Z<github.com/estafett" +
+      "e/estafette-ci-protos-golang/contracts_v" +
+      "1\252\002\031Estafette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -2365,11 +2365,11 @@ public final class ReleaseOuterClass {
       "afetteEvent\022/\n\013inserted_at\030\t \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022.\n\nupdated_at\030\n \001(\013" +
       "2\032.google.protobuf.Timestamp\022+\n\010duration" +
-      "\030\013 \001(\0132\031.google.protobuf.DurationB{\n\034io." +
-      "estafette.ci.contracts.v1Z?github.com/es" +
-      "tafette/estafette-ci-contracts-golang/co" +
-      "ntracts_v1\252\002\031Estafette.CI.Contracts.V1b\006" +
-      "proto3"
+      "\030\013 \001(\0132\031.google.protobuf.DurationBx\n\034io." +
+      "estafette.ci.contracts.v1Z<github.com/es" +
+      "tafette/estafette-ci-protos-golang/contr" +
+      "acts_v1\252\002\031Estafette.CI.Contracts.V1b\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

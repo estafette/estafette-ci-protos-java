@@ -854,10 +854,10 @@ public final class GitAuthorOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035contracts.v1/git_author.proto\022\014contrac" +
       "ts.v1\":\n\tGitAuthor\022\r\n\005email\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\020\n\010username\030\003 \001(\tB{\n\034io.estafett" +
-      "e.ci.contracts.v1Z?github.com/estafette/" +
-      "estafette-ci-contracts-golang/contracts_" +
-      "v1\252\002\031Estafette.CI.Contracts.V1b\006proto3"
+      "e\030\002 \001(\t\022\020\n\010username\030\003 \001(\tBx\n\034io.estafett" +
+      "e.ci.contracts.v1Z<github.com/estafette/" +
+      "estafette-ci-protos-golang/contracts_v1\252" +
+      "\002\031Estafette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

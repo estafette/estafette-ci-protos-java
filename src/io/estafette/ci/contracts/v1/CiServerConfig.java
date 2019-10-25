@@ -992,11 +992,11 @@ public final class CiServerConfig {
       "\n#contracts.v1/ci_server_config.proto\022\014c" +
       "ontracts.v1\"f\n\016CIServerConfig\022\020\n\010base_ur" +
       "l\030\001 \001(\t\022\032\n\022builder_events_url\030\002 \001(\t\022\025\n\rp" +
-      "ost_logs_url\030\003 \001(\t\022\017\n\007api_key\030\004 \001(\tB{\n\034i" +
-      "o.estafette.ci.contracts.v1Z?github.com/" +
-      "estafette/estafette-ci-contracts-golang/" +
-      "contracts_v1\252\002\031Estafette.CI.Contracts.V1" +
-      "b\006proto3"
+      "ost_logs_url\030\003 \001(\t\022\017\n\007api_key\030\004 \001(\tBx\n\034i" +
+      "o.estafette.ci.contracts.v1Z<github.com/" +
+      "estafette/estafette-ci-protos-golang/con" +
+      "tracts_v1\252\002\031Estafette.CI.Contracts.V1b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

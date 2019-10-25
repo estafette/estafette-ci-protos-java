@@ -580,10 +580,10 @@ public final class EstafetteCustomVersionOuterClass {
     java.lang.String[] descriptorData = {
       "\n*manifest.v1/estafette_custom_version.p" +
       "roto\022\013manifest.v1\"0\n\026EstafetteCustomVers" +
-      "ion\022\026\n\016label_template\030\001 \001(\tBx\n\033io.estafe" +
-      "tte.ci.manifest.v1Z>github.com/estafette" +
-      "/estafette-ci-contracts-golang/manifest_" +
-      "v1\252\002\030Estafette.CI.Manifest.V1b\006proto3"
+      "ion\022\026\n\016label_template\030\001 \001(\tBu\n\033io.estafe" +
+      "tte.ci.manifest.v1Z;github.com/estafette" +
+      "/estafette-ci-protos-golang/manifest_v1\252" +
+      "\002\030Estafette.CI.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -717,10 +717,10 @@ public final class WarningOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032contracts.v1/warning.proto\022\014contracts." +
       "v1\"*\n\007Warning\022\016\n\006status\030\001 \001(\t\022\017\n\007message" +
-      "\030\002 \001(\tB{\n\034io.estafette.ci.contracts.v1Z?" +
-      "github.com/estafette/estafette-ci-contra" +
-      "cts-golang/contracts_v1\252\002\031Estafette.CI.C" +
-      "ontracts.V1b\006proto3"
+      "\030\002 \001(\tBx\n\034io.estafette.ci.contracts.v1Z<" +
+      "github.com/estafette/estafette-ci-protos" +
+      "-golang/contracts_v1\252\002\031Estafette.CI.Cont" +
+      "racts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

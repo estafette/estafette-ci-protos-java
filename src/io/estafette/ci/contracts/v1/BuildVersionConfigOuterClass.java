@@ -1048,10 +1048,10 @@ public final class BuildVersionConfigOuterClass {
       "o\022\014contracts.v1\"y\n\022BuildVersionConfig\022\017\n" +
       "\007version\030\001 \001(\t\022\r\n\005major\030\002 \001(\003\022\r\n\005minor\030\003" +
       " \001(\003\022\r\n\005patch\030\004 \001(\t\022\r\n\005label\030\005 \001(\t\022\026\n\016au" +
-      "to_increment\030\006 \001(\003B{\n\034io.estafette.ci.co" +
-      "ntracts.v1Z?github.com/estafette/estafet" +
-      "te-ci-contracts-golang/contracts_v1\252\002\031Es" +
-      "tafette.CI.Contracts.V1b\006proto3"
+      "to_increment\030\006 \001(\003Bx\n\034io.estafette.ci.co" +
+      "ntracts.v1Z<github.com/estafette/estafet" +
+      "te-ci-protos-golang/contracts_v1\252\002\031Estaf" +
+      "ette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

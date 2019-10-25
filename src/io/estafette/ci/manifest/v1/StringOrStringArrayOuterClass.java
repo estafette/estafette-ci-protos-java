@@ -634,10 +634,10 @@ public final class StringOrStringArrayOuterClass {
     java.lang.String[] descriptorData = {
       "\n(manifest.v1/string_or_string_array.pro" +
       "to\022\013manifest.v1\"%\n\023StringOrStringArray\022\016" +
-      "\n\006values\030\001 \003(\tBx\n\033io.estafette.ci.manife" +
-      "st.v1Z>github.com/estafette/estafette-ci" +
-      "-contracts-golang/manifest_v1\252\002\030Estafett" +
-      "e.CI.Manifest.V1b\006proto3"
+      "\n\006values\030\001 \003(\tBu\n\033io.estafette.ci.manife" +
+      "st.v1Z;github.com/estafette/estafette-ci" +
+      "-protos-golang/manifest_v1\252\002\030Estafette.C" +
+      "I.Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

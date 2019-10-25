@@ -4449,11 +4449,11 @@ public final class PipelineOuterClass {
       "uf.Timestamp\022.\n\nupdated_at\030\021 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022+\n\010duration\030\022 \001(\0132\031" +
       ".google.protobuf.Duration\0223\n\017last_update" +
-      "d_at\030\023 \001(\0132\032.google.protobuf.TimestampB{" +
-      "\n\034io.estafette.ci.contracts.v1Z?github.c" +
-      "om/estafette/estafette-ci-contracts-gola" +
-      "ng/contracts_v1\252\002\031Estafette.CI.Contracts" +
-      ".V1b\006proto3"
+      "d_at\030\023 \001(\0132\032.google.protobuf.TimestampBx" +
+      "\n\034io.estafette.ci.contracts.v1Z<github.c" +
+      "om/estafette/estafette-ci-protos-golang/" +
+      "contracts_v1\252\002\031Estafette.CI.Contracts.V1" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

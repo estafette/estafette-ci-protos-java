@@ -2549,10 +2549,10 @@ public final class EstafetteManifestOuterClass {
       "2\035.manifest.v1.EstafetteRelease\032-\n\013Label" +
       "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0324" +
       "\n\022GlobalEnvVarsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001Bx\n\033io.estafette.ci.manifest" +
-      ".v1Z>github.com/estafette/estafette-ci-c" +
-      "ontracts-golang/manifest_v1\252\002\030Estafette." +
-      "CI.Manifest.V1b\006proto3"
+      "ue\030\002 \001(\t:\0028\001Bu\n\033io.estafette.ci.manifest" +
+      ".v1Z;github.com/estafette/estafette-ci-p" +
+      "rotos-golang/manifest_v1\252\002\030Estafette.CI." +
+      "Manifest.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

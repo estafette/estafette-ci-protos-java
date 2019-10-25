@@ -4254,10 +4254,10 @@ public final class BuildOuterClass {
       "\013inserted_at\030\020 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022.\n\nupdated_at\030\021 \001(\0132\032.google.prot" +
       "obuf.Timestamp\022+\n\010duration\030\022 \001(\0132\031.googl" +
-      "e.protobuf.DurationB{\n\034io.estafette.ci.c" +
-      "ontracts.v1Z?github.com/estafette/estafe" +
-      "tte-ci-contracts-golang/contracts_v1\252\002\031E" +
-      "stafette.CI.Contracts.V1b\006proto3"
+      "e.protobuf.DurationBx\n\034io.estafette.ci.c" +
+      "ontracts.v1Z<github.com/estafette/estafe" +
+      "tte-ci-protos-golang/contracts_v1\252\002\031Esta" +
+      "fette.CI.Contracts.V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
