@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.estafette.ci</groupId>
-    <artifactId>estafette-ci-protos</artifactId>
+    <artifactId>protos</artifactId>
     <version>0.0.20</version>
 
     <dependencies>
