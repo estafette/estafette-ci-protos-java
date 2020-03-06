@@ -61,15 +61,7 @@ public final class EstafetteTriggerOuterClass {
       "/manifest_v1\252\002\030Estafette.Ci.Manifest.V1b" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.estafette.ci.manifest.v1.EstafetteCronTriggerOuterClass.getDescriptor(),
@@ -80,7 +72,7 @@ public final class EstafetteTriggerOuterClass {
           com.estafette.ci.manifest.v1.EstafetteReleaseTriggerOuterClass.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteTriggerBuildActionOuterClass.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteTriggerReleaseActionOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_estafette_ci_manifest_v1_EstafetteTrigger_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_estafette_ci_manifest_v1_EstafetteTrigger_fieldAccessorTable = new

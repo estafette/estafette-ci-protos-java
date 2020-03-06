@@ -17,9 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private TailLogLine() {
     step_ = "";
-    exitCode_ = 0L;
     status_ = "";
-    autoInjected_ = false;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TailLogLine();
   }
 
   @java.lang.Override
@@ -35,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -108,7 +112,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -373,32 +377,31 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.TailLogLine other = (com.estafette.ci.contracts.v1.TailLogLine) obj;
 
-    boolean result = true;
-    result = result && getStep()
-        .equals(other.getStep());
-    result = result && (hasLogLine() == other.hasLogLine());
+    if (!getStep()
+        .equals(other.getStep())) return false;
+    if (hasLogLine() != other.hasLogLine()) return false;
     if (hasLogLine()) {
-      result = result && getLogLine()
-          .equals(other.getLogLine());
+      if (!getLogLine()
+          .equals(other.getLogLine())) return false;
     }
-    result = result && (hasImage() == other.hasImage());
+    if (hasImage() != other.hasImage()) return false;
     if (hasImage()) {
-      result = result && getImage()
-          .equals(other.getImage());
+      if (!getImage()
+          .equals(other.getImage())) return false;
     }
-    result = result && (hasDuration() == other.hasDuration());
+    if (hasDuration() != other.hasDuration()) return false;
     if (hasDuration()) {
-      result = result && getDuration()
-          .equals(other.getDuration());
+      if (!getDuration()
+          .equals(other.getDuration())) return false;
     }
-    result = result && (getExitCode()
-        == other.getExitCode());
-    result = result && getStatus()
-        .equals(other.getStatus());
-    result = result && (getAutoInjected()
-        == other.getAutoInjected());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getExitCode()
+        != other.getExitCode()) return false;
+    if (!getStatus()
+        .equals(other.getStatus())) return false;
+    if (getAutoInjected()
+        != other.getAutoInjected()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -640,35 +643,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -803,7 +806,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.estafette.ci.contracts.v1.BuildLogLine logLine_ = null;
+    private com.estafette.ci.contracts.v1.BuildLogLine logLine_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.BuildLogLine, com.estafette.ci.contracts.v1.BuildLogLine.Builder, com.estafette.ci.contracts.v1.BuildLogLineOrBuilder> logLineBuilder_;
     /**
@@ -920,7 +923,7 @@ private static final long serialVersionUID = 0L;
       return logLineBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.BuildLogStepDockerImage image_ = null;
+    private com.estafette.ci.contracts.v1.BuildLogStepDockerImage image_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.BuildLogStepDockerImage, com.estafette.ci.contracts.v1.BuildLogStepDockerImage.Builder, com.estafette.ci.contracts.v1.BuildLogStepDockerImageOrBuilder> imageBuilder_;
     /**
@@ -1037,7 +1040,7 @@ private static final long serialVersionUID = 0L;
       return imageBuilder_;
     }
 
-    private com.google.protobuf.Duration duration_ = null;
+    private com.google.protobuf.Duration duration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
     /**
@@ -1277,7 +1280,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

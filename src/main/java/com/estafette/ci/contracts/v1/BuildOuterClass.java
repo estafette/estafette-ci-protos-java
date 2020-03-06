@@ -58,15 +58,7 @@ public final class BuildOuterClass {
       "te/estafette-ci-protos-golang/contracts/" +
       "v1\252\002\031Estafette.Ci.Contracts.V1b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.estafette.ci.contracts.v1.GitCommitOuterClass.getDescriptor(),
@@ -76,7 +68,7 @@ public final class BuildOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteEventOuterClass.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_estafette_ci_contracts_v1_Build_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_estafette_ci_contracts_v1_Build_fieldAccessorTable = new

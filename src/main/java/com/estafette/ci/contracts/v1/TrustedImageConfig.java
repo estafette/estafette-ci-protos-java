@@ -17,10 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private TrustedImageConfig() {
     imagePath_ = "";
-    runPrivileged_ = false;
-    runDocker_ = false;
-    allowCommands_ = false;
     injectedCredentialTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TrustedImageConfig();
   }
 
   @java.lang.Override
@@ -70,15 +74,15 @@ private static final long serialVersionUID = 0L;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               injectedCredentialTypes_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             injectedCredentialTypes_.add(s);
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -92,7 +96,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         injectedCredentialTypes_ = injectedCredentialTypes_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -112,7 +116,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.contracts.v1.TrustedImageConfig.class, com.estafette.ci.contracts.v1.TrustedImageConfig.Builder.class);
   }
 
-  private int bitField0_;
   public static final int IMAGE_PATH_FIELD_NUMBER = 1;
   private volatile java.lang.Object imagePath_;
   /**
@@ -279,19 +282,18 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.TrustedImageConfig other = (com.estafette.ci.contracts.v1.TrustedImageConfig) obj;
 
-    boolean result = true;
-    result = result && getImagePath()
-        .equals(other.getImagePath());
-    result = result && (getRunPrivileged()
-        == other.getRunPrivileged());
-    result = result && (getRunDocker()
-        == other.getRunDocker());
-    result = result && (getAllowCommands()
-        == other.getAllowCommands());
-    result = result && getInjectedCredentialTypesList()
-        .equals(other.getInjectedCredentialTypesList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getImagePath()
+        .equals(other.getImagePath())) return false;
+    if (getRunPrivileged()
+        != other.getRunPrivileged()) return false;
+    if (getRunDocker()
+        != other.getRunDocker()) return false;
+    if (getAllowCommands()
+        != other.getAllowCommands()) return false;
+    if (!getInjectedCredentialTypesList()
+        .equals(other.getInjectedCredentialTypesList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -458,7 +460,7 @@ private static final long serialVersionUID = 0L;
       allowCommands_ = false;
 
       injectedCredentialTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -486,52 +488,50 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.contracts.v1.TrustedImageConfig buildPartial() {
       com.estafette.ci.contracts.v1.TrustedImageConfig result = new com.estafette.ci.contracts.v1.TrustedImageConfig(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.imagePath_ = imagePath_;
       result.runPrivileged_ = runPrivileged_;
       result.runDocker_ = runDocker_;
       result.allowCommands_ = allowCommands_;
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         injectedCredentialTypes_ = injectedCredentialTypes_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.injectedCredentialTypes_ = injectedCredentialTypes_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
       if (!other.injectedCredentialTypes_.isEmpty()) {
         if (injectedCredentialTypes_.isEmpty()) {
           injectedCredentialTypes_ = other.injectedCredentialTypes_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureInjectedCredentialTypesIsMutable();
           injectedCredentialTypes_.addAll(other.injectedCredentialTypes_);
@@ -747,9 +747,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList injectedCredentialTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureInjectedCredentialTypesIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         injectedCredentialTypes_ = new com.google.protobuf.LazyStringArrayList(injectedCredentialTypes_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
     /**
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInjectedCredentialTypes() {
       injectedCredentialTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

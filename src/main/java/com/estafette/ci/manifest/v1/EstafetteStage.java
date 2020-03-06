@@ -22,8 +22,13 @@ private static final long serialVersionUID = 0L;
     workingDirectory_ = "";
     commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     when_ = "";
-    autoInjected_ = false;
-    retries_ = 0L;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EstafetteStage();
   }
 
   @java.lang.Override
@@ -76,9 +81,9 @@ private static final long serialVersionUID = 0L;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               commands_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             commands_.add(s);
             break;
@@ -90,10 +95,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               envVars_ = com.google.protobuf.MapField.newMapField(
                   EnvVarsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000002;
             }
             com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
             envVars__ = input.readMessage(
@@ -113,10 +118,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               customProperties_ = com.google.protobuf.MapField.newMapField(
                   CustomPropertiesDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000004;
             }
             com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any>
             customProperties__ = input.readMessage(
@@ -126,7 +131,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -140,7 +145,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         commands_ = commands_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -174,7 +179,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.manifest.v1.EstafetteStage.class, com.estafette.ci.manifest.v1.EstafetteStage.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
@@ -669,29 +673,28 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.manifest.v1.EstafetteStage other = (com.estafette.ci.manifest.v1.EstafetteStage) obj;
 
-    boolean result = true;
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getContainerImage()
-        .equals(other.getContainerImage());
-    result = result && getShell()
-        .equals(other.getShell());
-    result = result && getWorkingDirectory()
-        .equals(other.getWorkingDirectory());
-    result = result && getCommandsList()
-        .equals(other.getCommandsList());
-    result = result && getWhen()
-        .equals(other.getWhen());
-    result = result && internalGetEnvVars().equals(
-        other.internalGetEnvVars());
-    result = result && (getAutoInjected()
-        == other.getAutoInjected());
-    result = result && (getRetries()
-        == other.getRetries());
-    result = result && internalGetCustomProperties().equals(
-        other.internalGetCustomProperties());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getContainerImage()
+        .equals(other.getContainerImage())) return false;
+    if (!getShell()
+        .equals(other.getShell())) return false;
+    if (!getWorkingDirectory()
+        .equals(other.getWorkingDirectory())) return false;
+    if (!getCommandsList()
+        .equals(other.getCommandsList())) return false;
+    if (!getWhen()
+        .equals(other.getWhen())) return false;
+    if (!internalGetEnvVars().equals(
+        other.internalGetEnvVars())) return false;
+    if (getAutoInjected()
+        != other.getAutoInjected()) return false;
+    if (getRetries()
+        != other.getRetries()) return false;
+    if (!internalGetCustomProperties().equals(
+        other.internalGetCustomProperties())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -897,7 +900,7 @@ private static final long serialVersionUID = 0L;
       workingDirectory_ = "";
 
       commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       when_ = "";
 
       internalGetMutableEnvVars().clear();
@@ -933,14 +936,13 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.manifest.v1.EstafetteStage buildPartial() {
       com.estafette.ci.manifest.v1.EstafetteStage result = new com.estafette.ci.manifest.v1.EstafetteStage(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.name_ = name_;
       result.containerImage_ = containerImage_;
       result.shell_ = shell_;
       result.workingDirectory_ = workingDirectory_;
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         commands_ = commands_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.commands_ = commands_;
       result.when_ = when_;
@@ -950,42 +952,41 @@ private static final long serialVersionUID = 0L;
       result.retries_ = retries_;
       result.customProperties_ = internalGetCustomProperties();
       result.customProperties_.makeImmutable();
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1018,7 +1019,7 @@ private static final long serialVersionUID = 0L;
       if (!other.commands_.isEmpty()) {
         if (commands_.isEmpty()) {
           commands_ = other.commands_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureCommandsIsMutable();
           commands_.addAll(other.commands_);
@@ -1347,9 +1348,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureCommandsIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         commands_ = new com.google.protobuf.LazyStringArrayList(commands_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
     /**
@@ -1420,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCommands() {
       commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1808,7 +1809,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

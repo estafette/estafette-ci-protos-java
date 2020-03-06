@@ -18,10 +18,14 @@ private static final long serialVersionUID = 0L;
   private BuildLogStepDockerImage() {
     name_ = "";
     tag_ = "";
-    isPulled_ = false;
-    imageSize_ = 0L;
     error_ = "";
-    isTrusted_ = false;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BuildLogStepDockerImage();
   }
 
   @java.lang.Override
@@ -37,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -95,7 +98,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -360,26 +363,25 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.BuildLogStepDockerImage other = (com.estafette.ci.contracts.v1.BuildLogStepDockerImage) obj;
 
-    boolean result = true;
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getTag()
-        .equals(other.getTag());
-    result = result && (getIsPulled()
-        == other.getIsPulled());
-    result = result && (getImageSize()
-        == other.getImageSize());
-    result = result && (hasPullDuration() == other.hasPullDuration());
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getTag()
+        .equals(other.getTag())) return false;
+    if (getIsPulled()
+        != other.getIsPulled()) return false;
+    if (getImageSize()
+        != other.getImageSize()) return false;
+    if (hasPullDuration() != other.hasPullDuration()) return false;
     if (hasPullDuration()) {
-      result = result && getPullDuration()
-          .equals(other.getPullDuration());
+      if (!getPullDuration()
+          .equals(other.getPullDuration())) return false;
     }
-    result = result && getError()
-        .equals(other.getError());
-    result = result && (getIsTrusted()
-        == other.getIsTrusted());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getError()
+        .equals(other.getError())) return false;
+    if (getIsTrusted()
+        != other.getIsTrusted()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -602,35 +604,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -887,7 +889,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Duration pullDuration_ = null;
+    private com.google.protobuf.Duration pullDuration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> pullDurationBuilder_;
     /**
@@ -1101,7 +1103,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

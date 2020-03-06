@@ -17,11 +17,15 @@ private static final long serialVersionUID = 0L;
   }
   private BuildLogStep() {
     step_ = "";
-    runIndex_ = 0L;
     logLines_ = java.util.Collections.emptyList();
-    exitCode_ = 0L;
     status_ = "";
-    autoInjected_ = false;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BuildLogStep();
   }
 
   @java.lang.Override
@@ -86,9 +90,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               logLines_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.BuildLogLine>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             logLines_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.BuildLogLine.parser(), extensionRegistry));
@@ -111,7 +115,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -125,7 +129,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         logLines_ = java.util.Collections.unmodifiableList(logLines_);
       }
       this.unknownFields = unknownFields.build();
@@ -145,7 +149,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.contracts.v1.BuildLogStep.class, com.estafette.ci.contracts.v1.BuildLogStep.Builder.class);
   }
 
-  private int bitField0_;
   public static final int STEP_FIELD_NUMBER = 1;
   private volatile java.lang.Object step_;
   /**
@@ -410,31 +413,30 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.BuildLogStep other = (com.estafette.ci.contracts.v1.BuildLogStep) obj;
 
-    boolean result = true;
-    result = result && getStep()
-        .equals(other.getStep());
-    result = result && (hasImage() == other.hasImage());
+    if (!getStep()
+        .equals(other.getStep())) return false;
+    if (hasImage() != other.hasImage()) return false;
     if (hasImage()) {
-      result = result && getImage()
-          .equals(other.getImage());
+      if (!getImage()
+          .equals(other.getImage())) return false;
     }
-    result = result && (getRunIndex()
-        == other.getRunIndex());
-    result = result && (hasDuration() == other.hasDuration());
+    if (getRunIndex()
+        != other.getRunIndex()) return false;
+    if (hasDuration() != other.hasDuration()) return false;
     if (hasDuration()) {
-      result = result && getDuration()
-          .equals(other.getDuration());
+      if (!getDuration()
+          .equals(other.getDuration())) return false;
     }
-    result = result && getLogLinesList()
-        .equals(other.getLogLinesList());
-    result = result && (getExitCode()
-        == other.getExitCode());
-    result = result && getStatus()
-        .equals(other.getStatus());
-    result = result && (getAutoInjected()
-        == other.getAutoInjected());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getLogLinesList()
+        .equals(other.getLogLinesList())) return false;
+    if (getExitCode()
+        != other.getExitCode()) return false;
+    if (!getStatus()
+        .equals(other.getStatus())) return false;
+    if (getAutoInjected()
+        != other.getAutoInjected()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -621,7 +623,7 @@ private static final long serialVersionUID = 0L;
       }
       if (logLinesBuilder_ == null) {
         logLines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         logLinesBuilder_.clear();
       }
@@ -658,7 +660,6 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.contracts.v1.BuildLogStep buildPartial() {
       com.estafette.ci.contracts.v1.BuildLogStep result = new com.estafette.ci.contracts.v1.BuildLogStep(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.step_ = step_;
       if (imageBuilder_ == null) {
         result.image_ = image_;
@@ -672,9 +673,9 @@ private static final long serialVersionUID = 0L;
         result.duration_ = durationBuilder_.build();
       }
       if (logLinesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           logLines_ = java.util.Collections.unmodifiableList(logLines_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.logLines_ = logLines_;
       } else {
@@ -683,42 +684,41 @@ private static final long serialVersionUID = 0L;
       result.exitCode_ = exitCode_;
       result.status_ = status_;
       result.autoInjected_ = autoInjected_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
         if (!other.logLines_.isEmpty()) {
           if (logLines_.isEmpty()) {
             logLines_ = other.logLines_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLogLinesIsMutable();
             logLines_.addAll(other.logLines_);
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
             logLinesBuilder_.dispose();
             logLinesBuilder_ = null;
             logLines_ = other.logLines_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             logLinesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLogLinesFieldBuilder() : null;
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.estafette.ci.contracts.v1.BuildLogStepDockerImage image_ = null;
+    private com.estafette.ci.contracts.v1.BuildLogStepDockerImage image_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.BuildLogStepDockerImage, com.estafette.ci.contracts.v1.BuildLogStepDockerImage.Builder, com.estafette.ci.contracts.v1.BuildLogStepDockerImageOrBuilder> imageBuilder_;
     /**
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Duration duration_ = null;
+    private com.google.protobuf.Duration duration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
     /**
@@ -1143,9 +1143,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.BuildLogLine> logLines_ =
       java.util.Collections.emptyList();
     private void ensureLogLinesIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         logLines_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.BuildLogLine>(logLines_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1295,7 +1295,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLogLines() {
       if (logLinesBuilder_ == null) {
         logLines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         logLinesBuilder_.clear();
@@ -1372,7 +1372,7 @@ private static final long serialVersionUID = 0L;
         logLinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.BuildLogLine, com.estafette.ci.contracts.v1.BuildLogLine.Builder, com.estafette.ci.contracts.v1.BuildLogLineOrBuilder>(
                 logLines_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         logLines_ = null;
@@ -1503,7 +1503,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

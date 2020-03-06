@@ -45,21 +45,13 @@ public final class EstafetteReleaseOuterClass {
       "ng/manifest_v1\252\002\030Estafette.Ci.Manifest.V" +
       "1b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.estafette.ci.manifest.v1.EstafetteReleaseActionOuterClass.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteStageOuterClass.getDescriptor(),
           com.estafette.ci.manifest.v1.EstafetteTriggerOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_estafette_ci_manifest_v1_EstafetteRelease_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_estafette_ci_manifest_v1_EstafetteRelease_fieldAccessorTable = new

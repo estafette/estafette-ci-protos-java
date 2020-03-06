@@ -19,6 +19,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EstafetteTrigger();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -31,7 +38,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -147,7 +153,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -440,49 +446,48 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.manifest.v1.EstafetteTrigger other = (com.estafette.ci.manifest.v1.EstafetteTrigger) obj;
 
-    boolean result = true;
-    result = result && (hasPipeline() == other.hasPipeline());
+    if (hasPipeline() != other.hasPipeline()) return false;
     if (hasPipeline()) {
-      result = result && getPipeline()
-          .equals(other.getPipeline());
+      if (!getPipeline()
+          .equals(other.getPipeline())) return false;
     }
-    result = result && (hasRelease() == other.hasRelease());
+    if (hasRelease() != other.hasRelease()) return false;
     if (hasRelease()) {
-      result = result && getRelease()
-          .equals(other.getRelease());
+      if (!getRelease()
+          .equals(other.getRelease())) return false;
     }
-    result = result && (hasGit() == other.hasGit());
+    if (hasGit() != other.hasGit()) return false;
     if (hasGit()) {
-      result = result && getGit()
-          .equals(other.getGit());
+      if (!getGit()
+          .equals(other.getGit())) return false;
     }
-    result = result && (hasDocker() == other.hasDocker());
+    if (hasDocker() != other.hasDocker()) return false;
     if (hasDocker()) {
-      result = result && getDocker()
-          .equals(other.getDocker());
+      if (!getDocker()
+          .equals(other.getDocker())) return false;
     }
-    result = result && (hasCron() == other.hasCron());
+    if (hasCron() != other.hasCron()) return false;
     if (hasCron()) {
-      result = result && getCron()
-          .equals(other.getCron());
+      if (!getCron()
+          .equals(other.getCron())) return false;
     }
-    result = result && (hasPubSub() == other.hasPubSub());
+    if (hasPubSub() != other.hasPubSub()) return false;
     if (hasPubSub()) {
-      result = result && getPubSub()
-          .equals(other.getPubSub());
+      if (!getPubSub()
+          .equals(other.getPubSub())) return false;
     }
-    result = result && (hasBuildAction() == other.hasBuildAction());
+    if (hasBuildAction() != other.hasBuildAction()) return false;
     if (hasBuildAction()) {
-      result = result && getBuildAction()
-          .equals(other.getBuildAction());
+      if (!getBuildAction()
+          .equals(other.getBuildAction())) return false;
     }
-    result = result && (hasReleaseAction() == other.hasReleaseAction());
+    if (hasReleaseAction() != other.hasReleaseAction()) return false;
     if (hasReleaseAction()) {
-      result = result && getReleaseAction()
-          .equals(other.getReleaseAction());
+      if (!getReleaseAction()
+          .equals(other.getReleaseAction())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -777,35 +782,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -872,7 +877,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.estafette.ci.manifest.v1.EstafettePipelineTrigger pipeline_ = null;
+    private com.estafette.ci.manifest.v1.EstafettePipelineTrigger pipeline_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafettePipelineTrigger, com.estafette.ci.manifest.v1.EstafettePipelineTrigger.Builder, com.estafette.ci.manifest.v1.EstafettePipelineTriggerOrBuilder> pipelineBuilder_;
     /**
@@ -989,7 +994,7 @@ private static final long serialVersionUID = 0L;
       return pipelineBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteReleaseTrigger release_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteReleaseTrigger release_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteReleaseTrigger, com.estafette.ci.manifest.v1.EstafetteReleaseTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteReleaseTriggerOrBuilder> releaseBuilder_;
     /**
@@ -1106,7 +1111,7 @@ private static final long serialVersionUID = 0L;
       return releaseBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteGitTrigger git_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteGitTrigger git_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteGitTrigger, com.estafette.ci.manifest.v1.EstafetteGitTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteGitTriggerOrBuilder> gitBuilder_;
     /**
@@ -1223,7 +1228,7 @@ private static final long serialVersionUID = 0L;
       return gitBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteDockerTrigger docker_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteDockerTrigger docker_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteDockerTrigger, com.estafette.ci.manifest.v1.EstafetteDockerTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteDockerTriggerOrBuilder> dockerBuilder_;
     /**
@@ -1340,7 +1345,7 @@ private static final long serialVersionUID = 0L;
       return dockerBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteCronTrigger cron_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteCronTrigger cron_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteCronTrigger, com.estafette.ci.manifest.v1.EstafetteCronTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteCronTriggerOrBuilder> cronBuilder_;
     /**
@@ -1457,7 +1462,7 @@ private static final long serialVersionUID = 0L;
       return cronBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafettePubSubTrigger pubSub_ = null;
+    private com.estafette.ci.manifest.v1.EstafettePubSubTrigger pubSub_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafettePubSubTrigger, com.estafette.ci.manifest.v1.EstafettePubSubTrigger.Builder, com.estafette.ci.manifest.v1.EstafettePubSubTriggerOrBuilder> pubSubBuilder_;
     /**
@@ -1574,7 +1579,7 @@ private static final long serialVersionUID = 0L;
       return pubSubBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteTriggerBuildAction buildAction_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteTriggerBuildAction buildAction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteTriggerBuildAction, com.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.Builder, com.estafette.ci.manifest.v1.EstafetteTriggerBuildActionOrBuilder> buildActionBuilder_;
     /**
@@ -1691,7 +1696,7 @@ private static final long serialVersionUID = 0L;
       return buildActionBuilder_;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction releaseAction_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction releaseAction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction, com.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.Builder, com.estafette.ci.manifest.v1.EstafetteTriggerReleaseActionOrBuilder> releaseActionBuilder_;
     /**
@@ -1810,7 +1815,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

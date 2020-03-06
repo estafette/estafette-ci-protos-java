@@ -39,20 +39,12 @@ public final class ListResponseOuterClass {
       "ette-ci-protos-golang/contracts/v1\252\002\031Est" +
       "afette.Ci.Contracts.V1b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.estafette.ci.contracts.v1.PaginationOuterClass.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_estafette_ci_contracts_v1_ListResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_estafette_ci_contracts_v1_ListResponse_fieldAccessorTable = new

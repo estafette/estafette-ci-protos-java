@@ -34,6 +34,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Build();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -106,18 +113,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               labels_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.Label>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000001;
             }
             labels_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.Label.parser(), extensionRegistry));
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               releaseTargets_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.ReleaseTarget>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000002;
             }
             releaseTargets_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.ReleaseTarget.parser(), extensionRegistry));
@@ -136,27 +143,27 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               commits_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.GitCommit>();
-              mutable_bitField0_ |= 0x00001000;
+              mutable_bitField0_ |= 0x00000004;
             }
             commits_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.GitCommit.parser(), extensionRegistry));
             break;
           }
           case 114: {
-            if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               triggers_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteTrigger>();
-              mutable_bitField0_ |= 0x00002000;
+              mutable_bitField0_ |= 0x00000008;
             }
             triggers_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteTrigger.parser(), extensionRegistry));
             break;
           }
           case 122: {
-            if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               events_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteEvent>();
-              mutable_bitField0_ |= 0x00004000;
+              mutable_bitField0_ |= 0x00000010;
             }
             events_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteEvent.parser(), extensionRegistry));
@@ -202,7 +209,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -216,19 +223,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
       }
-      if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         releaseTargets_ = java.util.Collections.unmodifiableList(releaseTargets_);
       }
-      if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         commits_ = java.util.Collections.unmodifiableList(commits_);
       }
-      if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         triggers_ = java.util.Collections.unmodifiableList(triggers_);
       }
-      if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         events_ = java.util.Collections.unmodifiableList(events_);
       }
       this.unknownFields = unknownFields.build();
@@ -248,7 +255,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.contracts.v1.Build.class, com.estafette.ci.contracts.v1.Build.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
@@ -981,54 +987,53 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.Build other = (com.estafette.ci.contracts.v1.Build) obj;
 
-    boolean result = true;
-    result = result && getId()
-        .equals(other.getId());
-    result = result && getRepoSource()
-        .equals(other.getRepoSource());
-    result = result && getRepoOwner()
-        .equals(other.getRepoOwner());
-    result = result && getRepoName()
-        .equals(other.getRepoName());
-    result = result && getRepoBranch()
-        .equals(other.getRepoBranch());
-    result = result && getRepoRevision()
-        .equals(other.getRepoRevision());
-    result = result && getBuildVersion()
-        .equals(other.getBuildVersion());
-    result = result && getBuildStatus()
-        .equals(other.getBuildStatus());
-    result = result && getLabelsList()
-        .equals(other.getLabelsList());
-    result = result && getReleaseTargetsList()
-        .equals(other.getReleaseTargetsList());
-    result = result && getManifest()
-        .equals(other.getManifest());
-    result = result && getManifestWithDefaults()
-        .equals(other.getManifestWithDefaults());
-    result = result && getCommitsList()
-        .equals(other.getCommitsList());
-    result = result && getTriggersList()
-        .equals(other.getTriggersList());
-    result = result && getEventsList()
-        .equals(other.getEventsList());
-    result = result && (hasInsertedAtTime() == other.hasInsertedAtTime());
+    if (!getId()
+        .equals(other.getId())) return false;
+    if (!getRepoSource()
+        .equals(other.getRepoSource())) return false;
+    if (!getRepoOwner()
+        .equals(other.getRepoOwner())) return false;
+    if (!getRepoName()
+        .equals(other.getRepoName())) return false;
+    if (!getRepoBranch()
+        .equals(other.getRepoBranch())) return false;
+    if (!getRepoRevision()
+        .equals(other.getRepoRevision())) return false;
+    if (!getBuildVersion()
+        .equals(other.getBuildVersion())) return false;
+    if (!getBuildStatus()
+        .equals(other.getBuildStatus())) return false;
+    if (!getLabelsList()
+        .equals(other.getLabelsList())) return false;
+    if (!getReleaseTargetsList()
+        .equals(other.getReleaseTargetsList())) return false;
+    if (!getManifest()
+        .equals(other.getManifest())) return false;
+    if (!getManifestWithDefaults()
+        .equals(other.getManifestWithDefaults())) return false;
+    if (!getCommitsList()
+        .equals(other.getCommitsList())) return false;
+    if (!getTriggersList()
+        .equals(other.getTriggersList())) return false;
+    if (!getEventsList()
+        .equals(other.getEventsList())) return false;
+    if (hasInsertedAtTime() != other.hasInsertedAtTime()) return false;
     if (hasInsertedAtTime()) {
-      result = result && getInsertedAtTime()
-          .equals(other.getInsertedAtTime());
+      if (!getInsertedAtTime()
+          .equals(other.getInsertedAtTime())) return false;
     }
-    result = result && (hasUpdatedAtTime() == other.hasUpdatedAtTime());
+    if (hasUpdatedAtTime() != other.hasUpdatedAtTime()) return false;
     if (hasUpdatedAtTime()) {
-      result = result && getUpdatedAtTime()
-          .equals(other.getUpdatedAtTime());
+      if (!getUpdatedAtTime()
+          .equals(other.getUpdatedAtTime())) return false;
     }
-    result = result && (hasDuration() == other.hasDuration());
+    if (hasDuration() != other.hasDuration()) return false;
     if (hasDuration()) {
-      result = result && getDuration()
-          .equals(other.getDuration());
+      if (!getDuration()
+          .equals(other.getDuration())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1246,13 +1251,13 @@ private static final long serialVersionUID = 0L;
 
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         labelsBuilder_.clear();
       }
       if (releaseTargetsBuilder_ == null) {
         releaseTargets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         releaseTargetsBuilder_.clear();
       }
@@ -1262,19 +1267,19 @@ private static final long serialVersionUID = 0L;
 
       if (commitsBuilder_ == null) {
         commits_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         commitsBuilder_.clear();
       }
       if (triggersBuilder_ == null) {
         triggers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         triggersBuilder_.clear();
       }
       if (eventsBuilder_ == null) {
         events_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         eventsBuilder_.clear();
       }
@@ -1323,7 +1328,6 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.contracts.v1.Build buildPartial() {
       com.estafette.ci.contracts.v1.Build result = new com.estafette.ci.contracts.v1.Build(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.id_ = id_;
       result.repoSource_ = repoSource_;
       result.repoOwner_ = repoOwner_;
@@ -1333,18 +1337,18 @@ private static final long serialVersionUID = 0L;
       result.buildVersion_ = buildVersion_;
       result.buildStatus_ = buildStatus_;
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.labels_ = labels_;
       } else {
         result.labels_ = labelsBuilder_.build();
       }
       if (releaseTargetsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           releaseTargets_ = java.util.Collections.unmodifiableList(releaseTargets_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.releaseTargets_ = releaseTargets_;
       } else {
@@ -1353,27 +1357,27 @@ private static final long serialVersionUID = 0L;
       result.manifest_ = manifest_;
       result.manifestWithDefaults_ = manifestWithDefaults_;
       if (commitsBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           commits_ = java.util.Collections.unmodifiableList(commits_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.commits_ = commits_;
       } else {
         result.commits_ = commitsBuilder_.build();
       }
       if (triggersBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           triggers_ = java.util.Collections.unmodifiableList(triggers_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.triggers_ = triggers_;
       } else {
         result.triggers_ = triggersBuilder_.build();
       }
       if (eventsBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           events_ = java.util.Collections.unmodifiableList(events_);
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.events_ = events_;
       } else {
@@ -1394,42 +1398,41 @@ private static final long serialVersionUID = 0L;
       } else {
         result.duration_ = durationBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1479,7 +1482,7 @@ private static final long serialVersionUID = 0L;
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -1492,7 +1495,7 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -1505,7 +1508,7 @@ private static final long serialVersionUID = 0L;
         if (!other.releaseTargets_.isEmpty()) {
           if (releaseTargets_.isEmpty()) {
             releaseTargets_ = other.releaseTargets_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureReleaseTargetsIsMutable();
             releaseTargets_.addAll(other.releaseTargets_);
@@ -1518,7 +1521,7 @@ private static final long serialVersionUID = 0L;
             releaseTargetsBuilder_.dispose();
             releaseTargetsBuilder_ = null;
             releaseTargets_ = other.releaseTargets_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000002);
             releaseTargetsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getReleaseTargetsFieldBuilder() : null;
@@ -1539,7 +1542,7 @@ private static final long serialVersionUID = 0L;
         if (!other.commits_.isEmpty()) {
           if (commits_.isEmpty()) {
             commits_ = other.commits_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureCommitsIsMutable();
             commits_.addAll(other.commits_);
@@ -1552,7 +1555,7 @@ private static final long serialVersionUID = 0L;
             commitsBuilder_.dispose();
             commitsBuilder_ = null;
             commits_ = other.commits_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000004);
             commitsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCommitsFieldBuilder() : null;
@@ -1565,7 +1568,7 @@ private static final long serialVersionUID = 0L;
         if (!other.triggers_.isEmpty()) {
           if (triggers_.isEmpty()) {
             triggers_ = other.triggers_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTriggersIsMutable();
             triggers_.addAll(other.triggers_);
@@ -1578,7 +1581,7 @@ private static final long serialVersionUID = 0L;
             triggersBuilder_.dispose();
             triggersBuilder_ = null;
             triggers_ = other.triggers_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00000008);
             triggersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTriggersFieldBuilder() : null;
@@ -1591,7 +1594,7 @@ private static final long serialVersionUID = 0L;
         if (!other.events_.isEmpty()) {
           if (events_.isEmpty()) {
             events_ = other.events_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureEventsIsMutable();
             events_.addAll(other.events_);
@@ -1604,7 +1607,7 @@ private static final long serialVersionUID = 0L;
             eventsBuilder_.dispose();
             eventsBuilder_ = null;
             events_ = other.events_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000010);
             eventsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEventsFieldBuilder() : null;
@@ -2207,9 +2210,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.Label> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         labels_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.Label>(labels_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2359,7 +2362,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -2436,7 +2439,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.Label, com.estafette.ci.contracts.v1.Label.Builder, com.estafette.ci.contracts.v1.LabelOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00000100) == 0x00000100),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;
@@ -2447,9 +2450,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.ReleaseTarget> releaseTargets_ =
       java.util.Collections.emptyList();
     private void ensureReleaseTargetsIsMutable() {
-      if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         releaseTargets_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.ReleaseTarget>(releaseTargets_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2599,7 +2602,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReleaseTargets() {
       if (releaseTargetsBuilder_ == null) {
         releaseTargets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         releaseTargetsBuilder_.clear();
@@ -2676,7 +2679,7 @@ private static final long serialVersionUID = 0L;
         releaseTargetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.ReleaseTarget, com.estafette.ci.contracts.v1.ReleaseTarget.Builder, com.estafette.ci.contracts.v1.ReleaseTargetOrBuilder>(
                 releaseTargets_,
-                ((bitField0_ & 0x00000200) == 0x00000200),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         releaseTargets_ = null;
@@ -2825,9 +2828,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.GitCommit> commits_ =
       java.util.Collections.emptyList();
     private void ensureCommitsIsMutable() {
-      if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         commits_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.GitCommit>(commits_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -2977,7 +2980,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCommits() {
       if (commitsBuilder_ == null) {
         commits_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         commitsBuilder_.clear();
@@ -3054,7 +3057,7 @@ private static final long serialVersionUID = 0L;
         commitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.GitCommit, com.estafette.ci.contracts.v1.GitCommit.Builder, com.estafette.ci.contracts.v1.GitCommitOrBuilder>(
                 commits_,
-                ((bitField0_ & 0x00001000) == 0x00001000),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         commits_ = null;
@@ -3065,9 +3068,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteTrigger> triggers_ =
       java.util.Collections.emptyList();
     private void ensureTriggersIsMutable() {
-      if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         triggers_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteTrigger>(triggers_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -3217,7 +3220,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTriggers() {
       if (triggersBuilder_ == null) {
         triggers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         triggersBuilder_.clear();
@@ -3294,7 +3297,7 @@ private static final long serialVersionUID = 0L;
         triggersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteTrigger, com.estafette.ci.manifest.v1.EstafetteTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteTriggerOrBuilder>(
                 triggers_,
-                ((bitField0_ & 0x00002000) == 0x00002000),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         triggers_ = null;
@@ -3305,9 +3308,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteEvent> events_ =
       java.util.Collections.emptyList();
     private void ensureEventsIsMutable() {
-      if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         events_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteEvent>(events_);
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -3457,7 +3460,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEvents() {
       if (eventsBuilder_ == null) {
         events_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         eventsBuilder_.clear();
@@ -3534,7 +3537,7 @@ private static final long serialVersionUID = 0L;
         eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteEvent, com.estafette.ci.manifest.v1.EstafetteEvent.Builder, com.estafette.ci.manifest.v1.EstafetteEventOrBuilder>(
                 events_,
-                ((bitField0_ & 0x00004000) == 0x00004000),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         events_ = null;
@@ -3542,7 +3545,7 @@ private static final long serialVersionUID = 0L;
       return eventsBuilder_;
     }
 
-    private com.google.protobuf.Timestamp insertedAtTime_ = null;
+    private com.google.protobuf.Timestamp insertedAtTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> insertedAtTimeBuilder_;
     /**
@@ -3659,7 +3662,7 @@ private static final long serialVersionUID = 0L;
       return insertedAtTimeBuilder_;
     }
 
-    private com.google.protobuf.Timestamp updatedAtTime_ = null;
+    private com.google.protobuf.Timestamp updatedAtTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtTimeBuilder_;
     /**
@@ -3776,7 +3779,7 @@ private static final long serialVersionUID = 0L;
       return updatedAtTimeBuilder_;
     }
 
-    private com.google.protobuf.Duration duration_ = null;
+    private com.google.protobuf.Duration duration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
     /**
@@ -3895,7 +3898,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

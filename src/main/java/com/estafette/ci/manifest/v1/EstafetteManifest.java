@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EstafetteManifest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -59,10 +66,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               labels_ = com.google.protobuf.MapField.newMapField(
                   LabelsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
             labels__ = input.readMessage(
@@ -85,10 +92,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               globalEnvVars_ = com.google.protobuf.MapField.newMapField(
                   GlobalEnvVarsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000002;
             }
             com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
             globalEnvVars__ = input.readMessage(
@@ -98,34 +105,34 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               triggers_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteTrigger>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000004;
             }
             triggers_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteTrigger.parser(), extensionRegistry));
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               stages_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteStage>();
-              mutable_bitField0_ |= 0x00000020;
+              mutable_bitField0_ |= 0x00000008;
             }
             stages_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteStage.parser(), extensionRegistry));
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               releases_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteRelease>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000010;
             }
             releases_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteRelease.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -139,13 +146,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         triggers_ = java.util.Collections.unmodifiableList(triggers_);
       }
-      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         stages_ = java.util.Collections.unmodifiableList(stages_);
       }
-      if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         releases_ = java.util.Collections.unmodifiableList(releases_);
       }
       this.unknownFields = unknownFields.build();
@@ -179,7 +186,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.manifest.v1.EstafetteManifest.class, com.estafette.ci.manifest.v1.EstafetteManifest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int BUILDER_FIELD_NUMBER = 1;
   private com.estafette.ci.manifest.v1.EstafetteBuilder builder_;
   /**
@@ -584,29 +590,28 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.manifest.v1.EstafetteManifest other = (com.estafette.ci.manifest.v1.EstafetteManifest) obj;
 
-    boolean result = true;
-    result = result && (hasBuilder() == other.hasBuilder());
+    if (hasBuilder() != other.hasBuilder()) return false;
     if (hasBuilder()) {
-      result = result && getBuilder()
-          .equals(other.getBuilder());
+      if (!getBuilder()
+          .equals(other.getBuilder())) return false;
     }
-    result = result && internalGetLabels().equals(
-        other.internalGetLabels());
-    result = result && (hasVersion() == other.hasVersion());
+    if (!internalGetLabels().equals(
+        other.internalGetLabels())) return false;
+    if (hasVersion() != other.hasVersion()) return false;
     if (hasVersion()) {
-      result = result && getVersion()
-          .equals(other.getVersion());
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
     }
-    result = result && internalGetGlobalEnvVars().equals(
-        other.internalGetGlobalEnvVars());
-    result = result && getTriggersList()
-        .equals(other.getTriggersList());
-    result = result && getStagesList()
-        .equals(other.getStagesList());
-    result = result && getReleasesList()
-        .equals(other.getReleasesList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!internalGetGlobalEnvVars().equals(
+        other.internalGetGlobalEnvVars())) return false;
+    if (!getTriggersList()
+        .equals(other.getTriggersList())) return false;
+    if (!getStagesList()
+        .equals(other.getStagesList())) return false;
+    if (!getReleasesList()
+        .equals(other.getReleasesList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -822,19 +827,19 @@ private static final long serialVersionUID = 0L;
       internalGetMutableGlobalEnvVars().clear();
       if (triggersBuilder_ == null) {
         triggers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         triggersBuilder_.clear();
       }
       if (stagesBuilder_ == null) {
         stages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         stagesBuilder_.clear();
       }
       if (releasesBuilder_ == null) {
         releases_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         releasesBuilder_.clear();
       }
@@ -865,7 +870,6 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.manifest.v1.EstafetteManifest buildPartial() {
       com.estafette.ci.manifest.v1.EstafetteManifest result = new com.estafette.ci.manifest.v1.EstafetteManifest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (builderBuilder_ == null) {
         result.builder_ = builder_;
       } else {
@@ -881,68 +885,67 @@ private static final long serialVersionUID = 0L;
       result.globalEnvVars_ = internalGetGlobalEnvVars();
       result.globalEnvVars_.makeImmutable();
       if (triggersBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           triggers_ = java.util.Collections.unmodifiableList(triggers_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.triggers_ = triggers_;
       } else {
         result.triggers_ = triggersBuilder_.build();
       }
       if (stagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           stages_ = java.util.Collections.unmodifiableList(stages_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.stages_ = stages_;
       } else {
         result.stages_ = stagesBuilder_.build();
       }
       if (releasesBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           releases_ = java.util.Collections.unmodifiableList(releases_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.releases_ = releases_;
       } else {
         result.releases_ = releasesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -970,7 +973,7 @@ private static final long serialVersionUID = 0L;
         if (!other.triggers_.isEmpty()) {
           if (triggers_.isEmpty()) {
             triggers_ = other.triggers_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTriggersIsMutable();
             triggers_.addAll(other.triggers_);
@@ -983,7 +986,7 @@ private static final long serialVersionUID = 0L;
             triggersBuilder_.dispose();
             triggersBuilder_ = null;
             triggers_ = other.triggers_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
             triggersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTriggersFieldBuilder() : null;
@@ -996,7 +999,7 @@ private static final long serialVersionUID = 0L;
         if (!other.stages_.isEmpty()) {
           if (stages_.isEmpty()) {
             stages_ = other.stages_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStagesIsMutable();
             stages_.addAll(other.stages_);
@@ -1009,7 +1012,7 @@ private static final long serialVersionUID = 0L;
             stagesBuilder_.dispose();
             stagesBuilder_ = null;
             stages_ = other.stages_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000008);
             stagesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getStagesFieldBuilder() : null;
@@ -1022,7 +1025,7 @@ private static final long serialVersionUID = 0L;
         if (!other.releases_.isEmpty()) {
           if (releases_.isEmpty()) {
             releases_ = other.releases_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureReleasesIsMutable();
             releases_.addAll(other.releases_);
@@ -1035,7 +1038,7 @@ private static final long serialVersionUID = 0L;
             releasesBuilder_.dispose();
             releasesBuilder_ = null;
             releases_ = other.releases_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000010);
             releasesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getReleasesFieldBuilder() : null;
@@ -1074,7 +1077,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.estafette.ci.manifest.v1.EstafetteBuilder builder_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteBuilder builder_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteBuilder, com.estafette.ci.manifest.v1.EstafetteBuilder.Builder, com.estafette.ci.manifest.v1.EstafetteBuilderOrBuilder> builderBuilder_;
     /**
@@ -1314,7 +1317,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteVersion version_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteVersion version_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteVersion, com.estafette.ci.manifest.v1.EstafetteVersion.Builder, com.estafette.ci.manifest.v1.EstafetteVersionOrBuilder> versionBuilder_;
     /**
@@ -1557,9 +1560,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteTrigger> triggers_ =
       java.util.Collections.emptyList();
     private void ensureTriggersIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         triggers_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteTrigger>(triggers_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1709,7 +1712,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTriggers() {
       if (triggersBuilder_ == null) {
         triggers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         triggersBuilder_.clear();
@@ -1786,7 +1789,7 @@ private static final long serialVersionUID = 0L;
         triggersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteTrigger, com.estafette.ci.manifest.v1.EstafetteTrigger.Builder, com.estafette.ci.manifest.v1.EstafetteTriggerOrBuilder>(
                 triggers_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         triggers_ = null;
@@ -1797,9 +1800,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteStage> stages_ =
       java.util.Collections.emptyList();
     private void ensureStagesIsMutable() {
-      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         stages_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteStage>(stages_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1949,7 +1952,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearStages() {
       if (stagesBuilder_ == null) {
         stages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         stagesBuilder_.clear();
@@ -2026,7 +2029,7 @@ private static final long serialVersionUID = 0L;
         stagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteStage, com.estafette.ci.manifest.v1.EstafetteStage.Builder, com.estafette.ci.manifest.v1.EstafetteStageOrBuilder>(
                 stages_,
-                ((bitField0_ & 0x00000020) == 0x00000020),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         stages_ = null;
@@ -2037,9 +2040,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteRelease> releases_ =
       java.util.Collections.emptyList();
     private void ensureReleasesIsMutable() {
-      if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         releases_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteRelease>(releases_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -2189,7 +2192,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReleases() {
       if (releasesBuilder_ == null) {
         releases_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         releasesBuilder_.clear();
@@ -2266,7 +2269,7 @@ private static final long serialVersionUID = 0L;
         releasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteRelease, com.estafette.ci.manifest.v1.EstafetteRelease.Builder, com.estafette.ci.manifest.v1.EstafetteReleaseOrBuilder>(
                 releases_,
-                ((bitField0_ & 0x00000040) == 0x00000040),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         releases_ = null;
@@ -2276,7 +2279,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

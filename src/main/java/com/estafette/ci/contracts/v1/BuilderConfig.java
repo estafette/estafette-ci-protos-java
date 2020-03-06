@@ -28,6 +28,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BuilderConfig();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -101,9 +108,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               events_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteEvent>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000001;
             }
             events_.add(
                 input.readMessage(com.estafette.ci.manifest.v1.EstafetteEvent.parser(), extensionRegistry));
@@ -175,25 +182,25 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 114: {
-            if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               credentials_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.CredentialConfig>();
-              mutable_bitField0_ |= 0x00002000;
+              mutable_bitField0_ |= 0x00000002;
             }
             credentials_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.CredentialConfig.parser(), extensionRegistry));
             break;
           }
           case 122: {
-            if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               trustedImages_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.TrustedImageConfig>();
-              mutable_bitField0_ |= 0x00004000;
+              mutable_bitField0_ |= 0x00000004;
             }
             trustedImages_.add(
                 input.readMessage(com.estafette.ci.contracts.v1.TrustedImageConfig.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -207,13 +214,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         events_ = java.util.Collections.unmodifiableList(events_);
       }
-      if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         credentials_ = java.util.Collections.unmodifiableList(credentials_);
       }
-      if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         trustedImages_ = java.util.Collections.unmodifiableList(trustedImages_);
       }
       this.unknownFields = unknownFields.build();
@@ -233,7 +240,6 @@ private static final long serialVersionUID = 0L;
             com.estafette.ci.contracts.v1.BuilderConfig.class, com.estafette.ci.contracts.v1.BuilderConfig.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ACTION_FIELD_NUMBER = 1;
   private volatile java.lang.Object action_;
   /**
@@ -806,57 +812,56 @@ private static final long serialVersionUID = 0L;
     }
     com.estafette.ci.contracts.v1.BuilderConfig other = (com.estafette.ci.contracts.v1.BuilderConfig) obj;
 
-    boolean result = true;
-    result = result && getAction()
-        .equals(other.getAction());
-    result = result && getTrack()
-        .equals(other.getTrack());
-    result = result && getRegistryMirror()
-        .equals(other.getRegistryMirror());
-    result = result && getDockerDaemonMtu()
-        .equals(other.getDockerDaemonMtu());
-    result = result && (hasManifest() == other.hasManifest());
+    if (!getAction()
+        .equals(other.getAction())) return false;
+    if (!getTrack()
+        .equals(other.getTrack())) return false;
+    if (!getRegistryMirror()
+        .equals(other.getRegistryMirror())) return false;
+    if (!getDockerDaemonMtu()
+        .equals(other.getDockerDaemonMtu())) return false;
+    if (hasManifest() != other.hasManifest()) return false;
     if (hasManifest()) {
-      result = result && getManifest()
-          .equals(other.getManifest());
+      if (!getManifest()
+          .equals(other.getManifest())) return false;
     }
-    result = result && getJobName()
-        .equals(other.getJobName());
-    result = result && getReleaseName()
-        .equals(other.getReleaseName());
-    result = result && getEventsList()
-        .equals(other.getEventsList());
-    result = result && (hasCiServer() == other.hasCiServer());
+    if (!getJobName()
+        .equals(other.getJobName())) return false;
+    if (!getReleaseName()
+        .equals(other.getReleaseName())) return false;
+    if (!getEventsList()
+        .equals(other.getEventsList())) return false;
+    if (hasCiServer() != other.hasCiServer()) return false;
     if (hasCiServer()) {
-      result = result && getCiServer()
-          .equals(other.getCiServer());
+      if (!getCiServer()
+          .equals(other.getCiServer())) return false;
     }
-    result = result && (hasBuildParams() == other.hasBuildParams());
+    if (hasBuildParams() != other.hasBuildParams()) return false;
     if (hasBuildParams()) {
-      result = result && getBuildParams()
-          .equals(other.getBuildParams());
+      if (!getBuildParams()
+          .equals(other.getBuildParams())) return false;
     }
-    result = result && (hasReleaseParams() == other.hasReleaseParams());
+    if (hasReleaseParams() != other.hasReleaseParams()) return false;
     if (hasReleaseParams()) {
-      result = result && getReleaseParams()
-          .equals(other.getReleaseParams());
+      if (!getReleaseParams()
+          .equals(other.getReleaseParams())) return false;
     }
-    result = result && (hasGit() == other.hasGit());
+    if (hasGit() != other.hasGit()) return false;
     if (hasGit()) {
-      result = result && getGit()
-          .equals(other.getGit());
+      if (!getGit()
+          .equals(other.getGit())) return false;
     }
-    result = result && (hasBuildVersion() == other.hasBuildVersion());
+    if (hasBuildVersion() != other.hasBuildVersion()) return false;
     if (hasBuildVersion()) {
-      result = result && getBuildVersion()
-          .equals(other.getBuildVersion());
+      if (!getBuildVersion()
+          .equals(other.getBuildVersion())) return false;
     }
-    result = result && getCredentialsList()
-        .equals(other.getCredentialsList());
-    result = result && getTrustedImagesList()
-        .equals(other.getTrustedImagesList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getCredentialsList()
+        .equals(other.getCredentialsList())) return false;
+    if (!getTrustedImagesList()
+        .equals(other.getTrustedImagesList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1070,7 +1075,7 @@ private static final long serialVersionUID = 0L;
 
       if (eventsBuilder_ == null) {
         events_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         eventsBuilder_.clear();
       }
@@ -1106,13 +1111,13 @@ private static final long serialVersionUID = 0L;
       }
       if (credentialsBuilder_ == null) {
         credentials_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         credentialsBuilder_.clear();
       }
       if (trustedImagesBuilder_ == null) {
         trustedImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         trustedImagesBuilder_.clear();
       }
@@ -1143,7 +1148,6 @@ private static final long serialVersionUID = 0L;
     public com.estafette.ci.contracts.v1.BuilderConfig buildPartial() {
       com.estafette.ci.contracts.v1.BuilderConfig result = new com.estafette.ci.contracts.v1.BuilderConfig(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.action_ = action_;
       result.track_ = track_;
       result.registryMirror_ = registryMirror_;
@@ -1156,9 +1160,9 @@ private static final long serialVersionUID = 0L;
       result.jobName_ = jobName_;
       result.releaseName_ = releaseName_;
       if (eventsBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           events_ = java.util.Collections.unmodifiableList(events_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.events_ = events_;
       } else {
@@ -1190,59 +1194,58 @@ private static final long serialVersionUID = 0L;
         result.buildVersion_ = buildVersionBuilder_.build();
       }
       if (credentialsBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           credentials_ = java.util.Collections.unmodifiableList(credentials_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.credentials_ = credentials_;
       } else {
         result.credentials_ = credentialsBuilder_.build();
       }
       if (trustedImagesBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           trustedImages_ = java.util.Collections.unmodifiableList(trustedImages_);
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.trustedImages_ = trustedImages_;
       } else {
         result.trustedImages_ = trustedImagesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1287,7 +1290,7 @@ private static final long serialVersionUID = 0L;
         if (!other.events_.isEmpty()) {
           if (events_.isEmpty()) {
             events_ = other.events_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureEventsIsMutable();
             events_.addAll(other.events_);
@@ -1300,7 +1303,7 @@ private static final long serialVersionUID = 0L;
             eventsBuilder_.dispose();
             eventsBuilder_ = null;
             events_ = other.events_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
             eventsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEventsFieldBuilder() : null;
@@ -1328,7 +1331,7 @@ private static final long serialVersionUID = 0L;
         if (!other.credentials_.isEmpty()) {
           if (credentials_.isEmpty()) {
             credentials_ = other.credentials_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCredentialsIsMutable();
             credentials_.addAll(other.credentials_);
@@ -1341,7 +1344,7 @@ private static final long serialVersionUID = 0L;
             credentialsBuilder_.dispose();
             credentialsBuilder_ = null;
             credentials_ = other.credentials_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00000002);
             credentialsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCredentialsFieldBuilder() : null;
@@ -1354,7 +1357,7 @@ private static final long serialVersionUID = 0L;
         if (!other.trustedImages_.isEmpty()) {
           if (trustedImages_.isEmpty()) {
             trustedImages_ = other.trustedImages_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTrustedImagesIsMutable();
             trustedImages_.addAll(other.trustedImages_);
@@ -1367,7 +1370,7 @@ private static final long serialVersionUID = 0L;
             trustedImagesBuilder_.dispose();
             trustedImagesBuilder_ = null;
             trustedImages_ = other.trustedImages_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000004);
             trustedImagesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTrustedImagesFieldBuilder() : null;
@@ -1682,7 +1685,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.estafette.ci.manifest.v1.EstafetteManifest manifest_ = null;
+    private com.estafette.ci.manifest.v1.EstafetteManifest manifest_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.manifest.v1.EstafetteManifest, com.estafette.ci.manifest.v1.EstafetteManifest.Builder, com.estafette.ci.manifest.v1.EstafetteManifestOrBuilder> manifestBuilder_;
     /**
@@ -1940,9 +1943,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.manifest.v1.EstafetteEvent> events_ =
       java.util.Collections.emptyList();
     private void ensureEventsIsMutable() {
-      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         events_ = new java.util.ArrayList<com.estafette.ci.manifest.v1.EstafetteEvent>(events_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2092,7 +2095,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEvents() {
       if (eventsBuilder_ == null) {
         events_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         eventsBuilder_.clear();
@@ -2169,7 +2172,7 @@ private static final long serialVersionUID = 0L;
         eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.manifest.v1.EstafetteEvent, com.estafette.ci.manifest.v1.EstafetteEvent.Builder, com.estafette.ci.manifest.v1.EstafetteEventOrBuilder>(
                 events_,
-                ((bitField0_ & 0x00000080) == 0x00000080),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         events_ = null;
@@ -2177,7 +2180,7 @@ private static final long serialVersionUID = 0L;
       return eventsBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.CiServerConfig ciServer_ = null;
+    private com.estafette.ci.contracts.v1.CiServerConfig ciServer_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.CiServerConfig, com.estafette.ci.contracts.v1.CiServerConfig.Builder, com.estafette.ci.contracts.v1.CiServerConfigOrBuilder> ciServerBuilder_;
     /**
@@ -2294,7 +2297,7 @@ private static final long serialVersionUID = 0L;
       return ciServerBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.BuildParamsConfig buildParams_ = null;
+    private com.estafette.ci.contracts.v1.BuildParamsConfig buildParams_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.BuildParamsConfig, com.estafette.ci.contracts.v1.BuildParamsConfig.Builder, com.estafette.ci.contracts.v1.BuildParamsConfigOrBuilder> buildParamsBuilder_;
     /**
@@ -2411,7 +2414,7 @@ private static final long serialVersionUID = 0L;
       return buildParamsBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.ReleaseParamsConfig releaseParams_ = null;
+    private com.estafette.ci.contracts.v1.ReleaseParamsConfig releaseParams_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.ReleaseParamsConfig, com.estafette.ci.contracts.v1.ReleaseParamsConfig.Builder, com.estafette.ci.contracts.v1.ReleaseParamsConfigOrBuilder> releaseParamsBuilder_;
     /**
@@ -2528,7 +2531,7 @@ private static final long serialVersionUID = 0L;
       return releaseParamsBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.GitConfig git_ = null;
+    private com.estafette.ci.contracts.v1.GitConfig git_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.GitConfig, com.estafette.ci.contracts.v1.GitConfig.Builder, com.estafette.ci.contracts.v1.GitConfigOrBuilder> gitBuilder_;
     /**
@@ -2645,7 +2648,7 @@ private static final long serialVersionUID = 0L;
       return gitBuilder_;
     }
 
-    private com.estafette.ci.contracts.v1.BuildVersionConfig buildVersion_ = null;
+    private com.estafette.ci.contracts.v1.BuildVersionConfig buildVersion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.estafette.ci.contracts.v1.BuildVersionConfig, com.estafette.ci.contracts.v1.BuildVersionConfig.Builder, com.estafette.ci.contracts.v1.BuildVersionConfigOrBuilder> buildVersionBuilder_;
     /**
@@ -2765,9 +2768,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.CredentialConfig> credentials_ =
       java.util.Collections.emptyList();
     private void ensureCredentialsIsMutable() {
-      if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         credentials_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.CredentialConfig>(credentials_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2917,7 +2920,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCredentials() {
       if (credentialsBuilder_ == null) {
         credentials_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         credentialsBuilder_.clear();
@@ -2994,7 +2997,7 @@ private static final long serialVersionUID = 0L;
         credentialsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.CredentialConfig, com.estafette.ci.contracts.v1.CredentialConfig.Builder, com.estafette.ci.contracts.v1.CredentialConfigOrBuilder>(
                 credentials_,
-                ((bitField0_ & 0x00002000) == 0x00002000),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         credentials_ = null;
@@ -3005,9 +3008,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.estafette.ci.contracts.v1.TrustedImageConfig> trustedImages_ =
       java.util.Collections.emptyList();
     private void ensureTrustedImagesIsMutable() {
-      if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         trustedImages_ = new java.util.ArrayList<com.estafette.ci.contracts.v1.TrustedImageConfig>(trustedImages_);
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -3157,7 +3160,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTrustedImages() {
       if (trustedImagesBuilder_ == null) {
         trustedImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         trustedImagesBuilder_.clear();
@@ -3234,7 +3237,7 @@ private static final long serialVersionUID = 0L;
         trustedImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.estafette.ci.contracts.v1.TrustedImageConfig, com.estafette.ci.contracts.v1.TrustedImageConfig.Builder, com.estafette.ci.contracts.v1.TrustedImageConfigOrBuilder>(
                 trustedImages_,
-                ((bitField0_ & 0x00004000) == 0x00004000),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         trustedImages_ = null;
@@ -3244,7 +3247,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override
